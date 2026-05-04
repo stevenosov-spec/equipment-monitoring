@@ -1,0 +1,25 @@
+<Window x:Class="EquipmentMonitoring.App.Views.TrendWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        Title="Тренд" Height="450" Width="800"
+        WindowStartupLocation="CenterOwner">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Панель выбора периода -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <TextBlock Text="С:" VerticalAlignment="Center" Margin="5"/>
+            <DatePicker SelectedDate="{Binding StartDate}" Width="150"/>
+            <TextBlock Text="по:" VerticalAlignment="Center" Margin="5"/>
+            <DatePicker SelectedDate="{Binding EndDate}" Width="150"/>
+            <Button Content="Обновить" Command="{Binding RefreshCommand}" Margin="10,0,0,0"/>
+        </StackPanel>
+
+        <!-- График OxyPlot -->
+        <oxy:PlotView Grid.Row="1" Model="{Binding PlotModel}" Margin="0,10,0,0"/>
+    </Grid>
+</Window>

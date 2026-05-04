@@ -1,0 +1,15 @@
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Core\obj\Debug\net8.0\EquipmentMonitoring.Core.csproj.AssemblyReference.cache
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Core\obj\Debug\net8.0\EquipmentMonitoring.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Core\obj\Debug\net8.0\EquipmentMonitoring.Core.AssemblyInfoInputs.cache
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Core\obj\Debug\net8.0\EquipmentMonitoring.Core.AssemblyInfo.cs
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Core\obj\Debug\net8.0\EquipmentMonitoring.Core.csproj.CoreCompileInputs.cache
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Core\obj\Debug\net8.0\EquipmentMonitoring.Core.sourcelink.json
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Core\bin\Debug\net8.0\EquipmentMonitoring.Core.deps.json
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Core\bin\Debug\net8.0\EquipmentMonitoring.Core.runtimeconfig.json
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Core\bin\Debug\net8.0\EquipmentMonitoring.Core.dll
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Core\bin\Debug\net8.0\EquipmentMonitoring.Core.pdb
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Core\obj\Debug\net8.0\EquipmentMonitoring.Core.dll
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Core\obj\Debug\net8.0\refint\EquipmentMonitoring.Core.dll
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Core\obj\Debug\net8.0\EquipmentMonitoring.Core.pdb
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Core\obj\Debug\net8.0\EquipmentMonitoring.Core.genruntimeconfig.cache
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Core\obj\Debug\net8.0\ref\EquipmentMonitoring.Core.dll

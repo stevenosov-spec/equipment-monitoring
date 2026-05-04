@@ -1,0 +1,16 @@
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Integration\obj\Debug\net8.0\EquipmentMonitoring.Integration.csproj.AssemblyReference.cache
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Integration\obj\Debug\net8.0\EquipmentMonitoring.Integration.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Integration\obj\Debug\net8.0\EquipmentMonitoring.Integration.AssemblyInfoInputs.cache
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Integration\obj\Debug\net8.0\EquipmentMonitoring.Integration.AssemblyInfo.cs
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Integration\obj\Debug\net8.0\EquipmentMonitoring.Integration.csproj.CoreCompileInputs.cache
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Integration\obj\Debug\net8.0\EquipmentMonitoring.Integration.sourcelink.json
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Integration\bin\Debug\net8.0\EquipmentMonitoring.Integration.deps.json
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Integration\bin\Debug\net8.0\EquipmentMonitoring.Integration.dll
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Integration\bin\Debug\net8.0\EquipmentMonitoring.Integration.pdb
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Integration\bin\Debug\net8.0\EquipmentMonitoring.Core.dll
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Integration\bin\Debug\net8.0\EquipmentMonitoring.Core.pdb
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Integration\obj\Debug\net8.0\Equipmen.D1D23066.Up2Date
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Integration\obj\Debug\net8.0\EquipmentMonitoring.Integration.dll
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Integration\obj\Debug\net8.0\refint\EquipmentMonitoring.Integration.dll
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Integration\obj\Debug\net8.0\EquipmentMonitoring.Integration.pdb
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Integration\obj\Debug\net8.0\ref\EquipmentMonitoring.Integration.dll

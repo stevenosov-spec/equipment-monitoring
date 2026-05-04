@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="EquipmentMonitoring.App/EquipmentMonitoring.App.csproj" Id="7c0d2e1b-ed44-4df3-bddb-65f9c2bc9390" />
+  <Project Path="EquipmentMonitoring.Core/EquipmentMonitoring.Core.csproj" Id="3bf9054d-5669-425e-89e0-de2bf0086d30" />
+  <Project Path="EquipmentMonitoring.Integration/EquipmentMonitoring.Integration.csproj" Id="695d2a30-8b74-4587-9462-3e98a571ce9d" />
+</Solution>
