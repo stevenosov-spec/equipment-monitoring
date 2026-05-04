@@ -1,14 +1,20 @@
-﻿using System.Threading.Tasks;
+﻿// Core/Services/Interfaces/IOeeService.cs
+using System;
+using System.Threading.Tasks;
 
 namespace EquipmentMonitoring.Core.Services.Interfaces
 {
-    /// <summary>Сервис расчёта OEE</summary>
     public interface IOeeService
     {
-        Task<OeeResult> CalculateOeeAsync(int equipmentId);
+        /// <summary>
+        /// Рассчитывает OEE для указанного оборудования за заданный период.
+        /// </summary>
+        /// <param name="equipmentId">ID оборудования</param>
+        /// <param name="from">Начало периода</param>
+        /// <param name="to">Конец периода</param>
+        Task<OeeResult> CalculateOeeAsync(int equipmentId, DateTime from, DateTime to);
     }
 
-    /// <summary>Результат расчёта OEE</summary>
     public class OeeResult
     {
         public int EquipmentId { get; set; }

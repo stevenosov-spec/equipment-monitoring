@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.App\App.xaml
-21562758794
+3-2125009677
 
-13-215284065
+14-1413635581
 2392058349678
-Views\MainWindow.xaml;Views\TrendWindow.xaml;
+Views\MainWindow.xaml;Views\OeeDateRangeDialog.xaml;Views\TrendWindow.xaml;
 
-False
+True
 

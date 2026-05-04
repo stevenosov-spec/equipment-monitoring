@@ -10,7 +10,7 @@ namespace EquipmentMonitoring.Core.Data
         {
             var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
             // ⚠️ Пароль должен совпадать с тем, что в App.xaml.cs
-            var connectionString = "server=localhost;port=3306;database=equipment_monitor;user=root;password=ваш_пароль";
+            var connectionString = "server=localhost;port=3306;database=equipment_monitor;user=root;password=1234";
             optionsBuilder.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 31)));
             return new AppDbContext(optionsBuilder.Options);
         }

@@ -1,0 +1,27 @@
+<Window x:Class="EquipmentMonitoring.App.Views.OeeDateRangeDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:system="clr-namespace:System;assembly=System.Runtime"
+        Title="Выберите период для отчёта OEE" 
+        Height="150" Width="400"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Text="Начало:" VerticalAlignment="Center" Margin="5"/>
+            <DatePicker x:Name="StartDatePicker" SelectedDate="{x:Static system:DateTime.Now}" Width="150"/>
+            <TextBlock Text="Конец:" VerticalAlignment="Center" Margin="10,5,5,5"/>
+            <DatePicker x:Name="EndDatePicker" SelectedDate="{x:Static system:DateTime.Now}" Width="150"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,15,0,0">
+            <Button Content="OK" Width="80" Click="OkButton_Click"/>
+            <Button Content="Отмена" Width="80" Margin="10,0,0,0" Click="CancelButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

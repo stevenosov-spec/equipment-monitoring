@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Admin\\equipment-monitoring2\\src\\EquipmentMonitoring\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{7C0D2E1B-ED44-4DF3-BDDB-65F9C2BC9390}|EquipmentMonitoring.App\\EquipmentMonitoring.App.csproj|c:\\users\\admin\\equipment-monitoring2\\src\\equipmentmonitoring\\equipmentmonitoring.app\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C0D2E1B-ED44-4DF3-BDDB-65F9C2BC9390}|EquipmentMonitoring.App\\EquipmentMonitoring.App.csproj|solutionrelative:equipmentmonitoring.app\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C0D2E1B-ED44-4DF3-BDDB-65F9C2BC9390}|EquipmentMonitoring.App\\EquipmentMonitoring.App.csproj|c:\\users\\admin\\equipment-monitoring2\\src\\equipmentmonitoring\\equipmentmonitoring.app\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C0D2E1B-ED44-4DF3-BDDB-65F9C2BC9390}|EquipmentMonitoring.App\\EquipmentMonitoring.App.csproj|solutionrelative:equipmentmonitoring.app\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,33 +9,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": -1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\equipment-monitoring2\\src\\EquipmentMonitoring\\EquipmentMonitoring.App\\App.xaml.cs",
-              "RelativeDocumentMoniker": "EquipmentMonitoring.App\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\Admin\\equipment-monitoring2\\src\\EquipmentMonitoring\\EquipmentMonitoring.App\\App.xaml.cs",
-              "RelativeToolTip": "EquipmentMonitoring.App\\App.xaml.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAgwBoAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T08:48:33.787Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\equipment-monitoring2\\src\\EquipmentMonitoring\\EquipmentMonitoring.App\\ViewModels\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "EquipmentMonitoring.App\\ViewModels\\MainViewModel.cs",
-              "ToolTip": "C:\\Users\\Admin\\equipment-monitoring2\\src\\EquipmentMonitoring\\EquipmentMonitoring.App\\ViewModels\\MainViewModel.cs",
-              "RelativeToolTip": "EquipmentMonitoring.App\\ViewModels\\MainViewModel.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAUwIMAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T07:51:05.055Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             }
           ]
         }

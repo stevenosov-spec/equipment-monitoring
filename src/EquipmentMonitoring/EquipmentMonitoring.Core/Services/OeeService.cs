@@ -1,4 +1,5 @@
-﻿using EquipmentMonitoring.Core.Data;
+﻿// Core/Services/OeeService.cs
+using EquipmentMonitoring.Core.Data;
 using EquipmentMonitoring.Core.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -16,30 +17,32 @@ namespace EquipmentMonitoring.Core.Services
             _contextFactory = contextFactory;
         }
 
-        public async Task<OeeResult> CalculateOeeAsync(int equipmentId)
+        /// <summary>
+        /// Рассчитывает OEE для указанного оборудования за заданный интервал [from, to].
+        /// </summary>
+        public async Task<OeeResult> CalculateOeeAsync(int equipmentId, DateTime from, DateTime to)
         {
-            var now = DateTime.Now;
-            var periodStart = now.AddHours(-1); // анализируем последний час
+            if (from > to)
+                (from, to) = (to, from);   // на всякий случай меняем местами
 
             await using var db = await _contextFactory.CreateDbContextAsync();
             var equipment = await db.Equipments.FindAsync(equipmentId);
             if (equipment == null) return null;
 
             // --- Доступность (Availability) ---
-            double totalMinutes = (now - periodStart).TotalMinutes;
+            double totalMinutes = (to - from).TotalMinutes;
             double downMinutes = 0;
 
-            // Учитываем отказы, которые были активны в течение периода
             var faults = await db.Faults
                 .Where(f => f.EquipmentId == equipmentId)
-                .Where(f => f.StartTime < now && (f.EndTime == null || f.EndTime > periodStart))
+                .Where(f => f.StartTime < to && (f.EndTime == null || f.EndTime > from))
                 .ToListAsync();
 
             foreach (var fault in faults)
             {
-                var faultStart = fault.StartTime < periodStart ? periodStart : fault.StartTime;
-                var faultEnd = fault.EndTime ?? now;
-                if (faultEnd > now) faultEnd = now;
+                var faultStart = fault.StartTime < from ? from : fault.StartTime;
+                var faultEnd = fault.EndTime ?? to;
+                if (faultEnd > to) faultEnd = to;
                 if (faultEnd > faultStart)
                     downMinutes += (faultEnd - faultStart).TotalMinutes;
             }
@@ -48,16 +51,19 @@ namespace EquipmentMonitoring.Core.Services
 
             // --- Производительность (Performance) ---
             double performance = 1.0;
+            // Берём первый параметр с NominalValue > 0 для этого оборудования
             var perfParam = await db.Parameters
                 .FirstOrDefaultAsync(p => p.EquipmentId == equipmentId && p.NominalValue > 0);
             if (perfParam != null && perfParam.NominalValue > 0)
             {
-                performance = perfParam.Value / perfParam.NominalValue;
-                performance = Math.Max(0, Math.Min(1.5, performance)); // ограничиваем 0..1.5
+                // Используем текущее значение параметра (или можно среднее за период)
+                double currentValue = perfParam.Value;
+                performance = currentValue / perfParam.NominalValue;
+                performance = Math.Max(0, Math.Min(1.5, performance));
             }
 
             // --- Качество (Quality) ---
-            double quality = 1.0; // нет данных о браке
+            double quality = 1.0; // заглушка
 
             return new OeeResult
             {

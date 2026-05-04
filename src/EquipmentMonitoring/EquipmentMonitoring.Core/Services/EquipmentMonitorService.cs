@@ -14,34 +14,29 @@ namespace EquipmentMonitoring.Core.Services
         private readonly ITagReader _tagReader;
         private readonly IDbContextFactory<AppDbContext> _contextFactory;
 
-        public event Action<Fault> OnFaultDetected;
-        public event Action<int, EquipmentState> OnStateChanged;
+        public event Action<Fault>? OnFaultDetected;
+        public event Action<int, EquipmentState>? OnStateChanged;
 
         public EquipmentMonitorService(ITagReader tagReader, IDbContextFactory<AppDbContext> contextFactory)
         {
             _tagReader = tagReader;
             _contextFactory = contextFactory;
-            // Подписываемся на новые данные от источника
             _tagReader.TagValueChanged += OnTagValueChanged;
         }
 
         public void Start() => _tagReader.Start();
         public void Stop() => _tagReader.Stop();
 
-        /// <summary>Обработчик нового значения тега: обновляет параметр, проверяет границы, создаёт отказы</summary>
-        private void OnTagValueChanged(object sender, TagValueChangedEventArgs e)
+        private void OnTagValueChanged(object? sender, TagValueChangedEventArgs e)
         {
-            // Потокобезопасное создание контекста
             using var db = _contextFactory.CreateDbContext();
             var param = db.Parameters.Include(p => p.Equipment).FirstOrDefault(p => p.TagAddress == e.TagAddress);
             if (param == null) return;
 
-            // Обновляем текущее значение
             param.Value = e.Value;
             param.Timestamp = e.Timestamp;
             db.SaveChanges();
 
-            // Проверка выхода за допустимые границы
             if (e.Value < param.MinAllowed || e.Value > param.MaxAllowed)
             {
                 var fault = new Fault
@@ -49,15 +44,14 @@ namespace EquipmentMonitoring.Core.Services
                     EquipmentId = param.EquipmentId,
                     StartTime = e.Timestamp,
                     Description = $"Параметр '{param.Name}' вне допуска: {e.Value} {param.Unit}",
-                    Priority = DeterminePriority(param, e.Value),   // расчёт важности
+                    Priority = DeterminePriority(param, e.Value),
                     Status = FaultStatus.Active
                 };
                 db.Faults.Add(fault);
                 db.SaveChanges();
-                OnFaultDetected?.Invoke(fault);  // оповещаем UI
+                OnFaultDetected?.Invoke(fault);
             }
 
-            // Обновляем общее состояние оборудования (если есть активный отказ → Alarm)
             var hasActiveFault = db.Faults.Any(f => f.EquipmentId == param.EquipmentId && f.Status == FaultStatus.Active);
             var newState = hasActiveFault ? EquipmentState.Alarm : EquipmentState.Normal;
             if (param.Equipment.CurrentState != newState)
@@ -69,7 +63,7 @@ namespace EquipmentMonitoring.Core.Services
         }
 
         /// <summary>Простая эвристика приоритета: чем сильнее отклонение, тем выше приоритет</summary>
-        private FaultPriority DeterminePriority(Parameter param, double value)
+        private static FaultPriority DeterminePriority(Parameter param, double value)   // ✅ static
         {
             double range = param.MaxAllowed - param.MinAllowed;
             if (range == 0) return FaultPriority.High;
@@ -83,6 +77,7 @@ namespace EquipmentMonitoring.Core.Services
         {
             _tagReader.TagValueChanged -= OnTagValueChanged;
             _tagReader.Stop();
+            GC.SuppressFinalize(this);   // ✅ рекомендуемый вызов
         }
     }
 }
