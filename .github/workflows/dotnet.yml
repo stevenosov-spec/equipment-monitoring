@@ -1,0 +1,82 @@
+name: .NET Build, Test, Publish
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  # ------- Сборка, тесты и покрытие кода -------
+  build-test-cover:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore src/EquipmentMonitoring/EquipmentMonitoring.slnx
+
+    - name: Build solution
+      run: dotnet build src/EquipmentMonitoring/EquipmentMonitoring.slnx --no-restore --configuration Release
+
+    - name: Run tests
+      run: dotnet test src/EquipmentMonitoring/EquipmentMonitoring.slnx --no-build --configuration Release --logger "trx;LogFileName=test_results.trx"
+
+    - name: Collect code coverage
+      run: dotnet test src/EquipmentMonitoring/EquipmentMonitoring.slnx --no-build --configuration Release --collect:"XPlat Code Coverage" --results-directory ./coverage
+
+    - name: Generate coverage report
+      if: always()
+      run: |
+        dotnet tool install --global dotnet-reportgenerator-globaltool
+        reportgenerator -reports:coverage/*/coverage.cobertura.xml -targetdir:coveragereport -reporttypes:Html
+
+    - name: Upload test results artifact
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results
+        path: test_results.trx
+
+    - name: Upload coverage report artifact
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: coverage-report
+        path: coveragereport
+
+
+  # ------- Публикация готового приложения -------
+  publish:
+    needs: build-test-cover            # запускается только после успешных тестов
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Publish application (single file)
+      run: >
+        dotnet publish src/EquipmentMonitoring/EquipmentMonitoring.App/EquipmentMonitoring.App.csproj
+        -c Release
+        -o ./publish
+        /p:PublishSingleFile=true
+        /p:RuntimeIdentifier=win-x64
+
+    - name: Upload application artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: EquipmentMonitoring-App
+        path: ./publish/
