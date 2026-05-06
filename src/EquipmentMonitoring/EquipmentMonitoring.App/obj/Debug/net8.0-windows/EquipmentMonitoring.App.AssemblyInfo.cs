@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EquipmentMonitoring.App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+347d3dbf35662fe9b52de411ab46a6762318fdc5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7deb9a0bca1bc3697ff078720df64e3eb432831a")]
 [assembly: System.Reflection.AssemblyProductAttribute("EquipmentMonitoring.App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EquipmentMonitoring.App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

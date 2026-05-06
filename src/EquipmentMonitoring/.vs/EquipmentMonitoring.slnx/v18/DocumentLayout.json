@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Admin\\equipment-monitoring2\\src\\EquipmentMonitoring\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7C0D2E1B-ED44-4DF3-BDDB-65F9C2BC9390}|EquipmentMonitoring.App\\EquipmentMonitoring.App.csproj|c:\\users\\admin\\equipment-monitoring2\\src\\equipmentmonitoring\\equipmentmonitoring.app\\views\\trendwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{7C0D2E1B-ED44-4DF3-BDDB-65F9C2BC9390}|EquipmentMonitoring.App\\EquipmentMonitoring.App.csproj|solutionrelative:equipmentmonitoring.app\\views\\trendwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C0D2E1B-ED44-4DF3-BDDB-65F9C2BC9390}|EquipmentMonitoring.App\\EquipmentMonitoring.App.csproj|c:\\users\\admin\\equipment-monitoring2\\src\\equipmentmonitoring\\equipmentmonitoring.app\\viewmodels\\trendviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C0D2E1B-ED44-4DF3-BDDB-65F9C2BC9390}|EquipmentMonitoring.App\\EquipmentMonitoring.App.csproj|solutionrelative:equipmentmonitoring.app\\viewmodels\\trendviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +18,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TrendWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\equipment-monitoring2\\src\\EquipmentMonitoring\\EquipmentMonitoring.App\\Views\\TrendWindow.xaml",
+              "RelativeDocumentMoniker": "EquipmentMonitoring.App\\Views\\TrendWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\equipment-monitoring2\\src\\EquipmentMonitoring\\EquipmentMonitoring.App\\Views\\TrendWindow.xaml",
+              "RelativeToolTip": "EquipmentMonitoring.App\\Views\\TrendWindow.xaml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAIwCEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-06T03:10:34.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TrendViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\equipment-monitoring2\\src\\EquipmentMonitoring\\EquipmentMonitoring.App\\ViewModels\\TrendViewModel.cs",
+              "RelativeDocumentMoniker": "EquipmentMonitoring.App\\ViewModels\\TrendViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\equipment-monitoring2\\src\\EquipmentMonitoring\\EquipmentMonitoring.App\\ViewModels\\TrendViewModel.cs",
+              "RelativeToolTip": "EquipmentMonitoring.App\\ViewModels\\TrendViewModel.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAkwH8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T03:10:17.304Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
