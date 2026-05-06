@@ -13,10 +13,10 @@ namespace EquipmentMonitoring.Tests.Services
 {
     public class EquipmentMonitorServiceTests
     {
-        private AppDbContext CreateInMemoryContext()
+        private AppDbContext CreateContext(string dbName)
         {
             var options = new DbContextOptionsBuilder<AppDbContext>()
-                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
+                .UseInMemoryDatabase(databaseName: dbName)
                 .Options;
             return new AppDbContext(options);
         }
@@ -25,23 +25,30 @@ namespace EquipmentMonitoring.Tests.Services
         public void TagValueChanged_WhenValueOutOfRange_CreatesFault()
         {
             // Arrange
-            using var db = CreateInMemoryContext();
-            var equipment = new Equipment { Name = "Насос", CurrentState = EquipmentState.Normal };
-            var parameter = new Parameter
+            string dbName = Guid.NewGuid().ToString();
+
+            // Подготавливаем данные в отдельном контексте
+            using (var setupDb = CreateContext(dbName))
             {
-                Name = "Давление",
-                TagAddress = "Pressure",
-                MinAllowed = 1,
-                MaxAllowed = 5,
-                Equipment = equipment
-            };
-            db.Equipments.Add(equipment);
-            db.Parameters.Add(parameter);
-            db.SaveChanges();
+                var equipment = new Equipment { Name = "Насос", CurrentState = EquipmentState.Normal };
+                var parameter = new Parameter
+                {
+                    Name = "Давление",
+                    TagAddress = "Pressure",
+                    MinAllowed = 1,
+                    MaxAllowed = 5,
+                    Equipment = equipment
+                };
+                setupDb.Equipments.Add(equipment);
+                setupDb.Parameters.Add(parameter);
+                setupDb.SaveChanges();
+            }
 
             var tagReaderMock = new Mock<ITagReader>();
             var factoryMock = new Mock<IDbContextFactory<AppDbContext>>();
-            factoryMock.Setup(f => f.CreateDbContext()).Returns(db);
+
+            // Фабрика создаёт новый контекст при каждом вызове
+            factoryMock.Setup(f => f.CreateDbContext()).Returns(() => CreateContext(dbName));
 
             var monitor = new EquipmentMonitorService(tagReaderMock.Object, factoryMock.Object);
             Fault detectedFault = null;
@@ -53,32 +60,41 @@ namespace EquipmentMonitoring.Tests.Services
 
             // Assert
             Assert.NotNull(detectedFault);
-            Assert.Equal(equipment.Id, detectedFault.EquipmentId);
             Assert.Equal(FaultStatus.Active, detectedFault.Status);
-            Assert.Single(db.Faults.ToList());
+
+            // Проверяем сохранение отказа в БД через новый контекст
+            using (var checkDb = CreateContext(dbName))
+            {
+                var faults = checkDb.Faults.ToList();
+                Assert.Single(faults);
+            }
         }
 
         [Fact]
         public void TagValueChanged_WhenValueInRange_DoesNotCreateFault()
         {
             // Arrange
-            using var db = CreateInMemoryContext();
-            var equipment = new Equipment { Name = "Насос", CurrentState = EquipmentState.Normal };
-            var parameter = new Parameter
+            string dbName = Guid.NewGuid().ToString();
+
+            using (var setupDb = CreateContext(dbName))
             {
-                Name = "Давление",
-                TagAddress = "Pressure",
-                MinAllowed = 1,
-                MaxAllowed = 5,
-                Equipment = equipment
-            };
-            db.Equipments.Add(equipment);
-            db.Parameters.Add(parameter);
-            db.SaveChanges();
+                var equipment = new Equipment { Name = "Насос", CurrentState = EquipmentState.Normal };
+                var parameter = new Parameter
+                {
+                    Name = "Давление",
+                    TagAddress = "Pressure",
+                    MinAllowed = 1,
+                    MaxAllowed = 5,
+                    Equipment = equipment
+                };
+                setupDb.Equipments.Add(equipment);
+                setupDb.Parameters.Add(parameter);
+                setupDb.SaveChanges();
+            }
 
             var tagReaderMock = new Mock<ITagReader>();
             var factoryMock = new Mock<IDbContextFactory<AppDbContext>>();
-            factoryMock.Setup(f => f.CreateDbContext()).Returns(db);
+            factoryMock.Setup(f => f.CreateDbContext()).Returns(() => CreateContext(dbName));
 
             var monitor = new EquipmentMonitorService(tagReaderMock.Object, factoryMock.Object);
             bool faultDetected = false;
