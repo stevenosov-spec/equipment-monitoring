@@ -1,0 +1,36 @@
+image: mcr.microsoft.com/dotnet/sdk:8.0
+
+stages:
+  - build
+  - test
+  - coverage
+
+before_script:
+  - dotnet restore src/EquipmentMonitoring.sln
+
+build:
+  stage: build
+  script:
+    - dotnet build src/EquipmentMonitoring.sln --no-restore
+
+test:
+  stage: test
+  script:
+    - dotnet test src/EquipmentMonitoring.sln --no-restore --logger "trx;LogFileName=test_results.trx"
+  artifacts:
+    reports:
+      junit: test_results.trx
+    paths:
+      - test_results.trx
+
+coverage:
+  stage: coverage
+  script:
+    - dotnet test src/EquipmentMonitoring.sln --collect:"XPlat Code Coverage" --results-directory ./coverage
+    - dotnet tool install --global dotnet-reportgenerator-globaltool
+    - reportgenerator -reports:coverage/*/coverage.cobertura.xml -targetdir:coveragereport -reporttypes:Html
+  artifacts:
+    paths:
+      - coveragereport
+  only:
+    - develop
