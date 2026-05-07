@@ -16,6 +16,7 @@
   "build": {
     "content": [
       { "files": [ "api/*.yml", "api/*.md" ] },
+      { "files": [ "index.md" ] },
       { "files": [ "docs/functions.md" ] },
       { "files": [ "README.md" ] }
     ],
