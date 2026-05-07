@@ -1,0 +1,115 @@
+### YamlMime:ManagedReference
+items:
+- uid: EquipmentMonitoring.Core.Services.Interfaces
+  commentId: N:EquipmentMonitoring.Core.Services.Interfaces
+  id: EquipmentMonitoring.Core.Services.Interfaces
+  children:
+  - EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor
+  - EquipmentMonitoring.Core.Services.Interfaces.IHistoryService
+  - EquipmentMonitoring.Core.Services.Interfaces.IOeeService
+  - EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator
+  - EquipmentMonitoring.Core.Services.Interfaces.ITagReader
+  - EquipmentMonitoring.Core.Services.Interfaces.OeeResult
+  - EquipmentMonitoring.Core.Services.Interfaces.ParameterHistoryPoint
+  - EquipmentMonitoring.Core.Services.Interfaces.TagValueChangedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: EquipmentMonitoring.Core.Services.Interfaces
+  nameWithType: EquipmentMonitoring.Core.Services.Interfaces
+  fullName: EquipmentMonitoring.Core.Services.Interfaces
+  type: Namespace
+  assemblies:
+  - EquipmentMonitoring.Core
+references:
+- uid: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor
+  commentId: T:EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor
+  parent: EquipmentMonitoring.Core.Services.Interfaces
+  href: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.html
+  name: IEquipmentMonitor
+  nameWithType: IEquipmentMonitor
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor
+- uid: EquipmentMonitoring.Core.Services.Interfaces.IHistoryService
+  commentId: T:EquipmentMonitoring.Core.Services.Interfaces.IHistoryService
+  parent: EquipmentMonitoring.Core.Services.Interfaces
+  href: EquipmentMonitoring.Core.Services.Interfaces.IHistoryService.html
+  name: IHistoryService
+  nameWithType: IHistoryService
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.IHistoryService
+- uid: EquipmentMonitoring.Core.Services.Interfaces.ParameterHistoryPoint
+  commentId: T:EquipmentMonitoring.Core.Services.Interfaces.ParameterHistoryPoint
+  href: EquipmentMonitoring.Core.Services.Interfaces.ParameterHistoryPoint.html
+  name: ParameterHistoryPoint
+  nameWithType: ParameterHistoryPoint
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.ParameterHistoryPoint
+- uid: EquipmentMonitoring.Core.Services.Interfaces.IOeeService
+  commentId: T:EquipmentMonitoring.Core.Services.Interfaces.IOeeService
+  parent: EquipmentMonitoring.Core.Services.Interfaces
+  href: EquipmentMonitoring.Core.Services.Interfaces.IOeeService.html
+  name: IOeeService
+  nameWithType: IOeeService
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.IOeeService
+- uid: EquipmentMonitoring.Core.Services.Interfaces.OeeResult
+  commentId: T:EquipmentMonitoring.Core.Services.Interfaces.OeeResult
+  href: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.html
+  name: OeeResult
+  nameWithType: OeeResult
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.OeeResult
+- uid: EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator
+  commentId: T:EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator
+  parent: EquipmentMonitoring.Core.Services.Interfaces
+  href: EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator.html
+  name: IReportGenerator
+  nameWithType: IReportGenerator
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator
+- uid: EquipmentMonitoring.Core.Services.Interfaces.ITagReader
+  commentId: T:EquipmentMonitoring.Core.Services.Interfaces.ITagReader
+  parent: EquipmentMonitoring.Core.Services.Interfaces
+  href: EquipmentMonitoring.Core.Services.Interfaces.ITagReader.html
+  name: ITagReader
+  nameWithType: ITagReader
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.ITagReader
+- uid: EquipmentMonitoring.Core.Services.Interfaces.TagValueChangedEventArgs
+  commentId: T:EquipmentMonitoring.Core.Services.Interfaces.TagValueChangedEventArgs
+  href: EquipmentMonitoring.Core.Services.Interfaces.TagValueChangedEventArgs.html
+  name: TagValueChangedEventArgs
+  nameWithType: TagValueChangedEventArgs
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.TagValueChangedEventArgs
+- uid: EquipmentMonitoring.Core.Services.Interfaces
+  commentId: N:EquipmentMonitoring.Core.Services.Interfaces
+  href: EquipmentMonitoring.html
+  name: EquipmentMonitoring.Core.Services.Interfaces
+  nameWithType: EquipmentMonitoring.Core.Services.Interfaces
+  fullName: EquipmentMonitoring.Core.Services.Interfaces
+  spec.csharp:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services
+    name: Services
+    href: EquipmentMonitoring.Core.Services.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services.Interfaces
+    name: Interfaces
+    href: EquipmentMonitoring.Core.Services.Interfaces.html
+  spec.vb:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services
+    name: Services
+    href: EquipmentMonitoring.Core.Services.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services.Interfaces
+    name: Interfaces
+    href: EquipmentMonitoring.Core.Services.Interfaces.html

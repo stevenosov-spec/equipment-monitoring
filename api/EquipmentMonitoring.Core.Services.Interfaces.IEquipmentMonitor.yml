@@ -1,0 +1,340 @@
+### YamlMime:ManagedReference
+items:
+- uid: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor
+  commentId: T:EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor
+  id: IEquipmentMonitor
+  parent: EquipmentMonitoring.Core.Services.Interfaces
+  children:
+  - EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.OnFaultDetected
+  - EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.OnStateChanged
+  - EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Start
+  - EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Stop
+  langs:
+  - csharp
+  - vb
+  name: IEquipmentMonitor
+  nameWithType: IEquipmentMonitor
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor
+  type: Interface
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IEquipmentMonitor.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: IEquipmentMonitor
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IEquipmentMonitor.cs
+    startLine: 7
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services.Interfaces
+  summary: Сервис мониторинга оборудования
+  example: []
+  syntax:
+    content: public interface IEquipmentMonitor
+    content.vb: Public Interface IEquipmentMonitor
+  derivedClasses:
+  - EquipmentMonitoring.Core.Services.EquipmentMonitorService
+- uid: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.OnFaultDetected
+  commentId: E:EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.OnFaultDetected
+  id: OnFaultDetected
+  parent: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor
+  langs:
+  - csharp
+  - vb
+  name: OnFaultDetected
+  nameWithType: IEquipmentMonitor.OnFaultDetected
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.OnFaultDetected
+  type: Event
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IEquipmentMonitor.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: OnFaultDetected
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IEquipmentMonitor.cs
+    startLine: 9
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services.Interfaces
+  syntax:
+    content: event Action<Fault> OnFaultDetected
+    return:
+      type: System.Action{EquipmentMonitoring.Core.Models.Fault}
+    content.vb: Event OnFaultDetected As Action(Of Fault)
+- uid: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.OnStateChanged
+  commentId: E:EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.OnStateChanged
+  id: OnStateChanged
+  parent: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor
+  langs:
+  - csharp
+  - vb
+  name: OnStateChanged
+  nameWithType: IEquipmentMonitor.OnStateChanged
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.OnStateChanged
+  type: Event
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IEquipmentMonitor.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: OnStateChanged
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IEquipmentMonitor.cs
+    startLine: 10
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services.Interfaces
+  syntax:
+    content: event Action<int, EquipmentState> OnStateChanged
+    return:
+      type: System.Action{System.Int32,EquipmentMonitoring.Core.Enums.EquipmentState}
+    content.vb: Event OnStateChanged As Action(Of Integer, EquipmentState)
+- uid: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Start
+  commentId: M:EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Start
+  id: Start
+  parent: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: IEquipmentMonitor.Start()
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Start()
+  type: Method
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IEquipmentMonitor.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Start
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IEquipmentMonitor.cs
+    startLine: 11
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services.Interfaces
+  syntax:
+    content: void Start()
+    content.vb: Sub Start()
+  overload: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Start*
+- uid: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Stop
+  commentId: M:EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Stop
+  id: Stop
+  parent: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: IEquipmentMonitor.Stop()
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Stop()
+  type: Method
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IEquipmentMonitor.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Stop
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IEquipmentMonitor.cs
+    startLine: 12
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services.Interfaces
+  syntax:
+    content: void Stop()
+    content.vb: Sub [Stop]()
+  overload: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Stop*
+references:
+- uid: EquipmentMonitoring.Core.Services.Interfaces
+  commentId: N:EquipmentMonitoring.Core.Services.Interfaces
+  href: EquipmentMonitoring.html
+  name: EquipmentMonitoring.Core.Services.Interfaces
+  nameWithType: EquipmentMonitoring.Core.Services.Interfaces
+  fullName: EquipmentMonitoring.Core.Services.Interfaces
+  spec.csharp:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services
+    name: Services
+    href: EquipmentMonitoring.Core.Services.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services.Interfaces
+    name: Interfaces
+    href: EquipmentMonitoring.Core.Services.Interfaces.html
+  spec.vb:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services
+    name: Services
+    href: EquipmentMonitoring.Core.Services.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services.Interfaces
+    name: Interfaces
+    href: EquipmentMonitoring.Core.Services.Interfaces.html
+- uid: System.Action{EquipmentMonitoring.Core.Models.Fault}
+  commentId: T:System.Action{EquipmentMonitoring.Core.Models.Fault}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<Fault>
+  nameWithType: Action<Fault>
+  fullName: System.Action<EquipmentMonitoring.Core.Models.Fault>
+  nameWithType.vb: Action(Of Fault)
+  fullName.vb: System.Action(Of EquipmentMonitoring.Core.Models.Fault)
+  name.vb: Action(Of Fault)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: EquipmentMonitoring.Core.Models.Fault
+    name: Fault
+    href: EquipmentMonitoring.Core.Models.Fault.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: EquipmentMonitoring.Core.Models.Fault
+    name: Fault
+    href: EquipmentMonitoring.Core.Models.Fault.html
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Action{System.Int32,EquipmentMonitoring.Core.Enums.EquipmentState}
+  commentId: T:System.Action{System.Int32,EquipmentMonitoring.Core.Enums.EquipmentState}
+  parent: System
+  definition: System.Action`2
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<int, EquipmentState>
+  nameWithType: Action<int, EquipmentState>
+  fullName: System.Action<int, EquipmentMonitoring.Core.Enums.EquipmentState>
+  nameWithType.vb: Action(Of Integer, EquipmentState)
+  fullName.vb: System.Action(Of Integer, EquipmentMonitoring.Core.Enums.EquipmentState)
+  name.vb: Action(Of Integer, EquipmentState)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: EquipmentMonitoring.Core.Enums.EquipmentState
+    name: EquipmentState
+    href: EquipmentMonitoring.Core.Enums.EquipmentState.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: EquipmentMonitoring.Core.Enums.EquipmentState
+    name: EquipmentState
+    href: EquipmentMonitoring.Core.Enums.EquipmentState.html
+  - name: )
+- uid: System.Action`2
+  commentId: T:System.Action`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<T1, T2>
+  nameWithType: Action<T1, T2>
+  fullName: System.Action<T1, T2>
+  nameWithType.vb: Action(Of T1, T2)
+  fullName.vb: System.Action(Of T1, T2)
+  name.vb: Action(Of T1, T2)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Start*
+  commentId: Overload:EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Start
+  href: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.html#EquipmentMonitoring_Core_Services_Interfaces_IEquipmentMonitor_Start
+  name: Start
+  nameWithType: IEquipmentMonitor.Start
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Start
+- uid: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Stop*
+  commentId: Overload:EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Stop
+  href: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.html#EquipmentMonitoring_Core_Services_Interfaces_IEquipmentMonitor_Stop
+  name: Stop
+  nameWithType: IEquipmentMonitor.Stop
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Stop

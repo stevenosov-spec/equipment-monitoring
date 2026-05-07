@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: EquipmentMonitoring.Integration.Simulation
+  commentId: N:EquipmentMonitoring.Integration.Simulation
+  id: EquipmentMonitoring.Integration.Simulation
+  children:
+  - EquipmentMonitoring.Integration.Simulation.SimulatedTagReader
+  langs:
+  - csharp
+  - vb
+  name: EquipmentMonitoring.Integration.Simulation
+  nameWithType: EquipmentMonitoring.Integration.Simulation
+  fullName: EquipmentMonitoring.Integration.Simulation
+  type: Namespace
+  assemblies:
+  - EquipmentMonitoring.Integration
+references:
+- uid: EquipmentMonitoring.Integration.Simulation.SimulatedTagReader
+  commentId: T:EquipmentMonitoring.Integration.Simulation.SimulatedTagReader
+  href: EquipmentMonitoring.Integration.Simulation.SimulatedTagReader.html
+  name: SimulatedTagReader
+  nameWithType: SimulatedTagReader
+  fullName: EquipmentMonitoring.Integration.Simulation.SimulatedTagReader

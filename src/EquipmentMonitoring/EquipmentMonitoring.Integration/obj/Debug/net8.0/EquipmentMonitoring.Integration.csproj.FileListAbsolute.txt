@@ -14,3 +14,6 @@ C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring
 C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Integration\obj\Debug\net8.0\refint\EquipmentMonitoring.Integration.dll
 C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Integration\obj\Debug\net8.0\EquipmentMonitoring.Integration.pdb
 C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Integration\obj\Debug\net8.0\ref\EquipmentMonitoring.Integration.dll
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Integration\bin\Debug\net8.0\EquipmentMonitoring.Integration.xml
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Integration\bin\Debug\net8.0\EquipmentMonitoring.Core.xml
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.Integration\obj\Debug\net8.0\EquipmentMonitoring.Integration.xml

@@ -6,16 +6,21 @@ using OxyPlot.Annotations;
 using OxyPlot.Axes;
 using OxyPlot.Series;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace EquipmentMonitoring.App.ViewModels
 {
+    /// <summary>
+    /// ViewModel для окна тренда. Управляет построением графика изменения параметра во времени,
+    /// отображает допустимые границы в виде горизонтальных линий.
+    /// </summary>
     public partial class TrendViewModel : ObservableObject
     {
-        // Доступные масштабы
+        /// <summary>
+        /// Доступные предустановленные масштабы времени.
+        /// </summary>
         public ObservableCollection<string> Scales { get; } = new()
         {
             "Последний час",
@@ -33,7 +38,7 @@ namespace EquipmentMonitoring.App.ViewModels
         private readonly double _maxAllowed;
 
         [ObservableProperty]
-        private PlotModel _plotModel;
+        private PlotModel _plotModel = new PlotModel();   // инициализируем сразу, чтобы избежать null
 
         [ObservableProperty]
         private DateTime _startDate = DateTime.Now.AddDays(-1);
@@ -42,10 +47,21 @@ namespace EquipmentMonitoring.App.ViewModels
         private DateTime _endDate = DateTime.Now;
 
         [ObservableProperty]
-        private string _selectedScale = "Сутки"; // по умолчанию
+        private string _selectedScale = "Сутки";
 
+        /// <summary>
+        /// Команда обновления данных графика.
+        /// </summary>
         public IRelayCommand RefreshCommand { get; }
 
+        /// <summary>
+        /// Инициализирует ViewModel тренда.
+        /// </summary>
+        /// <param name="historyService">Сервис для получения исторических данных параметра.</param>
+        /// <param name="parameterId">Идентификатор параметра.</param>
+        /// <param name="parameterName">Название параметра.</param>
+        /// <param name="minAllowed">Нижняя граница допуска.</param>
+        /// <param name="maxAllowed">Верхняя граница допуска.</param>
         public TrendViewModel(IHistoryService historyService,
                               int parameterId,
                               string parameterName,
@@ -58,10 +74,12 @@ namespace EquipmentMonitoring.App.ViewModels
             _minAllowed = minAllowed;
             _maxAllowed = maxAllowed;
             RefreshCommand = new RelayCommand(async () => await LoadDataAsync());
-            _ = LoadDataAsync();
+            _ = LoadDataAsync();   // начальная загрузка
         }
 
-        // При изменении масштаба пересчитываем даты и загружаем данные
+        /// <summary>
+        /// При изменении выбранного масштаба пересчитывает даты и запускает обновление графика.
+        /// </summary>
         partial void OnSelectedScaleChanged(string value)
         {
             DateTime now = DateTime.Now;
@@ -74,12 +92,15 @@ namespace EquipmentMonitoring.App.ViewModels
                 "Сутки" => now.AddDays(-1),
                 "Неделя" => now.AddDays(-7),
                 "Месяц" => now.AddMonths(-1),
-                _ => StartDate // для "Произвольный" оставляем текущие значения
+                _ => StartDate   // "Произвольный" оставляет текущие значения
             };
 
             _ = LoadDataAsync();
         }
 
+        /// <summary>
+        /// Загружает исторические данные и строит график с допустимыми границами.
+        /// </summary>
         private async Task LoadDataAsync()
         {
             var points = await _historyService.GetHistoryAsync(_parameterId, StartDate, EndDate);
@@ -92,7 +113,7 @@ namespace EquipmentMonitoring.App.ViewModels
                 series.Points.Add(new DataPoint(DateTimeAxis.ToDouble(p.Timestamp), p.Value));
             model.Series.Add(series);
 
-            // Границы допуска
+            // Отображаем границы допуска, если они заданы
             if (_maxAllowed > _minAllowed)
             {
                 model.Annotations.Add(new LineAnnotation

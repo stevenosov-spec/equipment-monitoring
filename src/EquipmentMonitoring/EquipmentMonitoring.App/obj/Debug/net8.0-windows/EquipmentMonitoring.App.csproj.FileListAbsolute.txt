@@ -142,3 +142,5 @@ C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring
 C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.App\obj\Debug\net8.0-windows\EquipmentMonitoring.App.pdb
 C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.App\obj\Debug\net8.0-windows\EquipmentMonitoring.App.genruntimeconfig.cache
 C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.App\obj\Debug\net8.0-windows\ref\EquipmentMonitoring.App.dll
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.App\bin\Debug\net8.0-windows\EquipmentMonitoring.Core.xml
+C:\Users\Admin\equipment-monitoring2\src\EquipmentMonitoring\EquipmentMonitoring.App\bin\Debug\net8.0-windows\EquipmentMonitoring.Integration.xml

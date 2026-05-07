@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: EquipmentMonitoring.Core.Data
+  commentId: N:EquipmentMonitoring.Core.Data
+  id: EquipmentMonitoring.Core.Data
+  children:
+  - EquipmentMonitoring.Core.Data.AppDbContext
+  - EquipmentMonitoring.Core.Data.DesignTimeDbContextFactory
+  langs:
+  - csharp
+  - vb
+  name: EquipmentMonitoring.Core.Data
+  nameWithType: EquipmentMonitoring.Core.Data
+  fullName: EquipmentMonitoring.Core.Data
+  type: Namespace
+  assemblies:
+  - EquipmentMonitoring.Core
+references:
+- uid: EquipmentMonitoring.Core.Data.AppDbContext
+  commentId: T:EquipmentMonitoring.Core.Data.AppDbContext
+  parent: EquipmentMonitoring.Core.Data
+  href: EquipmentMonitoring.Core.Data.AppDbContext.html
+  name: AppDbContext
+  nameWithType: AppDbContext
+  fullName: EquipmentMonitoring.Core.Data.AppDbContext
+- uid: EquipmentMonitoring.Core.Data.DesignTimeDbContextFactory
+  commentId: T:EquipmentMonitoring.Core.Data.DesignTimeDbContextFactory
+  href: EquipmentMonitoring.Core.Data.DesignTimeDbContextFactory.html
+  name: DesignTimeDbContextFactory
+  nameWithType: DesignTimeDbContextFactory
+  fullName: EquipmentMonitoring.Core.Data.DesignTimeDbContextFactory
+- uid: EquipmentMonitoring.Core.Data
+  commentId: N:EquipmentMonitoring.Core.Data
+  href: EquipmentMonitoring.html
+  name: EquipmentMonitoring.Core.Data
+  nameWithType: EquipmentMonitoring.Core.Data
+  fullName: EquipmentMonitoring.Core.Data
+  spec.csharp:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Data
+    name: Data
+    href: EquipmentMonitoring.Core.Data.html
+  spec.vb:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Data
+    name: Data
+    href: EquipmentMonitoring.Core.Data.html

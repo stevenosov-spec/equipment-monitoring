@@ -1,0 +1,753 @@
+### YamlMime:ManagedReference
+items:
+- uid: EquipmentMonitoring.Core.Models.Parameter
+  commentId: T:EquipmentMonitoring.Core.Models.Parameter
+  id: Parameter
+  parent: EquipmentMonitoring.Core.Models
+  children:
+  - EquipmentMonitoring.Core.Models.Parameter.Equipment
+  - EquipmentMonitoring.Core.Models.Parameter.EquipmentId
+  - EquipmentMonitoring.Core.Models.Parameter.Id
+  - EquipmentMonitoring.Core.Models.Parameter.MaxAllowed
+  - EquipmentMonitoring.Core.Models.Parameter.MinAllowed
+  - EquipmentMonitoring.Core.Models.Parameter.Name
+  - EquipmentMonitoring.Core.Models.Parameter.NominalValue
+  - EquipmentMonitoring.Core.Models.Parameter.TagAddress
+  - EquipmentMonitoring.Core.Models.Parameter.Timestamp
+  - EquipmentMonitoring.Core.Models.Parameter.Unit
+  - EquipmentMonitoring.Core.Models.Parameter.Value
+  langs:
+  - csharp
+  - vb
+  name: Parameter
+  nameWithType: Parameter
+  fullName: EquipmentMonitoring.Core.Models.Parameter
+  type: Class
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Parameter
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+    startLine: 4
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Models
+  syntax:
+    content: public class Parameter
+    content.vb: Public Class Parameter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: EquipmentMonitoring.Core.Models.Parameter.Id
+  commentId: P:EquipmentMonitoring.Core.Models.Parameter.Id
+  id: Id
+  parent: EquipmentMonitoring.Core.Models.Parameter
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Parameter.Id
+  fullName: EquipmentMonitoring.Core.Models.Parameter.Id
+  type: Property
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Id
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+    startLine: 6
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Models
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: EquipmentMonitoring.Core.Models.Parameter.Id*
+- uid: EquipmentMonitoring.Core.Models.Parameter.Name
+  commentId: P:EquipmentMonitoring.Core.Models.Parameter.Name
+  id: Name
+  parent: EquipmentMonitoring.Core.Models.Parameter
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Parameter.Name
+  fullName: EquipmentMonitoring.Core.Models.Parameter.Name
+  type: Property
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Name
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+    startLine: 7
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Models
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: EquipmentMonitoring.Core.Models.Parameter.Name*
+- uid: EquipmentMonitoring.Core.Models.Parameter.Value
+  commentId: P:EquipmentMonitoring.Core.Models.Parameter.Value
+  id: Value
+  parent: EquipmentMonitoring.Core.Models.Parameter
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: Parameter.Value
+  fullName: EquipmentMonitoring.Core.Models.Parameter.Value
+  type: Property
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Value
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+    startLine: 8
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Models
+  syntax:
+    content: public double Value { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Value As Double
+  overload: EquipmentMonitoring.Core.Models.Parameter.Value*
+- uid: EquipmentMonitoring.Core.Models.Parameter.Timestamp
+  commentId: P:EquipmentMonitoring.Core.Models.Parameter.Timestamp
+  id: Timestamp
+  parent: EquipmentMonitoring.Core.Models.Parameter
+  langs:
+  - csharp
+  - vb
+  name: Timestamp
+  nameWithType: Parameter.Timestamp
+  fullName: EquipmentMonitoring.Core.Models.Parameter.Timestamp
+  type: Property
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Timestamp
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+    startLine: 9
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Models
+  syntax:
+    content: public DateTime Timestamp { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property Timestamp As Date
+  overload: EquipmentMonitoring.Core.Models.Parameter.Timestamp*
+- uid: EquipmentMonitoring.Core.Models.Parameter.Unit
+  commentId: P:EquipmentMonitoring.Core.Models.Parameter.Unit
+  id: Unit
+  parent: EquipmentMonitoring.Core.Models.Parameter
+  langs:
+  - csharp
+  - vb
+  name: Unit
+  nameWithType: Parameter.Unit
+  fullName: EquipmentMonitoring.Core.Models.Parameter.Unit
+  type: Property
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Unit
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+    startLine: 10
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Models
+  syntax:
+    content: public string Unit { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Unit As String
+  overload: EquipmentMonitoring.Core.Models.Parameter.Unit*
+- uid: EquipmentMonitoring.Core.Models.Parameter.TagAddress
+  commentId: P:EquipmentMonitoring.Core.Models.Parameter.TagAddress
+  id: TagAddress
+  parent: EquipmentMonitoring.Core.Models.Parameter
+  langs:
+  - csharp
+  - vb
+  name: TagAddress
+  nameWithType: Parameter.TagAddress
+  fullName: EquipmentMonitoring.Core.Models.Parameter.TagAddress
+  type: Property
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: TagAddress
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+    startLine: 11
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Models
+  syntax:
+    content: public string TagAddress { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TagAddress As String
+  overload: EquipmentMonitoring.Core.Models.Parameter.TagAddress*
+- uid: EquipmentMonitoring.Core.Models.Parameter.MinAllowed
+  commentId: P:EquipmentMonitoring.Core.Models.Parameter.MinAllowed
+  id: MinAllowed
+  parent: EquipmentMonitoring.Core.Models.Parameter
+  langs:
+  - csharp
+  - vb
+  name: MinAllowed
+  nameWithType: Parameter.MinAllowed
+  fullName: EquipmentMonitoring.Core.Models.Parameter.MinAllowed
+  type: Property
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: MinAllowed
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+    startLine: 12
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Models
+  syntax:
+    content: public double MinAllowed { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property MinAllowed As Double
+  overload: EquipmentMonitoring.Core.Models.Parameter.MinAllowed*
+- uid: EquipmentMonitoring.Core.Models.Parameter.MaxAllowed
+  commentId: P:EquipmentMonitoring.Core.Models.Parameter.MaxAllowed
+  id: MaxAllowed
+  parent: EquipmentMonitoring.Core.Models.Parameter
+  langs:
+  - csharp
+  - vb
+  name: MaxAllowed
+  nameWithType: Parameter.MaxAllowed
+  fullName: EquipmentMonitoring.Core.Models.Parameter.MaxAllowed
+  type: Property
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: MaxAllowed
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+    startLine: 13
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Models
+  syntax:
+    content: public double MaxAllowed { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property MaxAllowed As Double
+  overload: EquipmentMonitoring.Core.Models.Parameter.MaxAllowed*
+- uid: EquipmentMonitoring.Core.Models.Parameter.NominalValue
+  commentId: P:EquipmentMonitoring.Core.Models.Parameter.NominalValue
+  id: NominalValue
+  parent: EquipmentMonitoring.Core.Models.Parameter
+  langs:
+  - csharp
+  - vb
+  name: NominalValue
+  nameWithType: Parameter.NominalValue
+  fullName: EquipmentMonitoring.Core.Models.Parameter.NominalValue
+  type: Property
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: NominalValue
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+    startLine: 14
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Models
+  syntax:
+    content: public double NominalValue { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property NominalValue As Double
+  overload: EquipmentMonitoring.Core.Models.Parameter.NominalValue*
+- uid: EquipmentMonitoring.Core.Models.Parameter.EquipmentId
+  commentId: P:EquipmentMonitoring.Core.Models.Parameter.EquipmentId
+  id: EquipmentId
+  parent: EquipmentMonitoring.Core.Models.Parameter
+  langs:
+  - csharp
+  - vb
+  name: EquipmentId
+  nameWithType: Parameter.EquipmentId
+  fullName: EquipmentMonitoring.Core.Models.Parameter.EquipmentId
+  type: Property
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: EquipmentId
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+    startLine: 16
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Models
+  syntax:
+    content: public int EquipmentId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property EquipmentId As Integer
+  overload: EquipmentMonitoring.Core.Models.Parameter.EquipmentId*
+- uid: EquipmentMonitoring.Core.Models.Parameter.Equipment
+  commentId: P:EquipmentMonitoring.Core.Models.Parameter.Equipment
+  id: Equipment
+  parent: EquipmentMonitoring.Core.Models.Parameter
+  langs:
+  - csharp
+  - vb
+  name: Equipment
+  nameWithType: Parameter.Equipment
+  fullName: EquipmentMonitoring.Core.Models.Parameter.Equipment
+  type: Property
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Equipment
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Models/Parameter.cs
+    startLine: 17
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Models
+  syntax:
+    content: public Equipment? Equipment { get; set; }
+    parameters: []
+    return:
+      type: EquipmentMonitoring.Core.Models.Equipment
+    content.vb: Public Property Equipment As Equipment
+  overload: EquipmentMonitoring.Core.Models.Parameter.Equipment*
+references:
+- uid: EquipmentMonitoring.Core.Models
+  commentId: N:EquipmentMonitoring.Core.Models
+  href: EquipmentMonitoring.html
+  name: EquipmentMonitoring.Core.Models
+  nameWithType: EquipmentMonitoring.Core.Models
+  fullName: EquipmentMonitoring.Core.Models
+  spec.csharp:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Models
+    name: Models
+    href: EquipmentMonitoring.Core.Models.html
+  spec.vb:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Models
+    name: Models
+    href: EquipmentMonitoring.Core.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EquipmentMonitoring.Core.Models.Parameter.Id*
+  commentId: Overload:EquipmentMonitoring.Core.Models.Parameter.Id
+  href: EquipmentMonitoring.Core.Models.Parameter.html#EquipmentMonitoring_Core_Models_Parameter_Id
+  name: Id
+  nameWithType: Parameter.Id
+  fullName: EquipmentMonitoring.Core.Models.Parameter.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: EquipmentMonitoring.Core.Models.Parameter.Name*
+  commentId: Overload:EquipmentMonitoring.Core.Models.Parameter.Name
+  href: EquipmentMonitoring.Core.Models.Parameter.html#EquipmentMonitoring_Core_Models_Parameter_Name
+  name: Name
+  nameWithType: Parameter.Name
+  fullName: EquipmentMonitoring.Core.Models.Parameter.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: EquipmentMonitoring.Core.Models.Parameter.Value*
+  commentId: Overload:EquipmentMonitoring.Core.Models.Parameter.Value
+  href: EquipmentMonitoring.Core.Models.Parameter.html#EquipmentMonitoring_Core_Models_Parameter_Value
+  name: Value
+  nameWithType: Parameter.Value
+  fullName: EquipmentMonitoring.Core.Models.Parameter.Value
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: EquipmentMonitoring.Core.Models.Parameter.Timestamp*
+  commentId: Overload:EquipmentMonitoring.Core.Models.Parameter.Timestamp
+  href: EquipmentMonitoring.Core.Models.Parameter.html#EquipmentMonitoring_Core_Models_Parameter_Timestamp
+  name: Timestamp
+  nameWithType: Parameter.Timestamp
+  fullName: EquipmentMonitoring.Core.Models.Parameter.Timestamp
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: EquipmentMonitoring.Core.Models.Parameter.Unit*
+  commentId: Overload:EquipmentMonitoring.Core.Models.Parameter.Unit
+  href: EquipmentMonitoring.Core.Models.Parameter.html#EquipmentMonitoring_Core_Models_Parameter_Unit
+  name: Unit
+  nameWithType: Parameter.Unit
+  fullName: EquipmentMonitoring.Core.Models.Parameter.Unit
+- uid: EquipmentMonitoring.Core.Models.Parameter.TagAddress*
+  commentId: Overload:EquipmentMonitoring.Core.Models.Parameter.TagAddress
+  href: EquipmentMonitoring.Core.Models.Parameter.html#EquipmentMonitoring_Core_Models_Parameter_TagAddress
+  name: TagAddress
+  nameWithType: Parameter.TagAddress
+  fullName: EquipmentMonitoring.Core.Models.Parameter.TagAddress
+- uid: EquipmentMonitoring.Core.Models.Parameter.MinAllowed*
+  commentId: Overload:EquipmentMonitoring.Core.Models.Parameter.MinAllowed
+  href: EquipmentMonitoring.Core.Models.Parameter.html#EquipmentMonitoring_Core_Models_Parameter_MinAllowed
+  name: MinAllowed
+  nameWithType: Parameter.MinAllowed
+  fullName: EquipmentMonitoring.Core.Models.Parameter.MinAllowed
+- uid: EquipmentMonitoring.Core.Models.Parameter.MaxAllowed*
+  commentId: Overload:EquipmentMonitoring.Core.Models.Parameter.MaxAllowed
+  href: EquipmentMonitoring.Core.Models.Parameter.html#EquipmentMonitoring_Core_Models_Parameter_MaxAllowed
+  name: MaxAllowed
+  nameWithType: Parameter.MaxAllowed
+  fullName: EquipmentMonitoring.Core.Models.Parameter.MaxAllowed
+- uid: EquipmentMonitoring.Core.Models.Parameter.NominalValue*
+  commentId: Overload:EquipmentMonitoring.Core.Models.Parameter.NominalValue
+  href: EquipmentMonitoring.Core.Models.Parameter.html#EquipmentMonitoring_Core_Models_Parameter_NominalValue
+  name: NominalValue
+  nameWithType: Parameter.NominalValue
+  fullName: EquipmentMonitoring.Core.Models.Parameter.NominalValue
+- uid: EquipmentMonitoring.Core.Models.Parameter.EquipmentId*
+  commentId: Overload:EquipmentMonitoring.Core.Models.Parameter.EquipmentId
+  href: EquipmentMonitoring.Core.Models.Parameter.html#EquipmentMonitoring_Core_Models_Parameter_EquipmentId
+  name: EquipmentId
+  nameWithType: Parameter.EquipmentId
+  fullName: EquipmentMonitoring.Core.Models.Parameter.EquipmentId
+- uid: EquipmentMonitoring.Core.Models.Parameter.Equipment*
+  commentId: Overload:EquipmentMonitoring.Core.Models.Parameter.Equipment
+  href: EquipmentMonitoring.Core.Models.Parameter.html#EquipmentMonitoring_Core_Models_Parameter_Equipment
+  name: Equipment
+  nameWithType: Parameter.Equipment
+  fullName: EquipmentMonitoring.Core.Models.Parameter.Equipment
+- uid: EquipmentMonitoring.Core.Models.Equipment
+  commentId: T:EquipmentMonitoring.Core.Models.Equipment
+  parent: EquipmentMonitoring.Core.Models
+  href: EquipmentMonitoring.Core.Models.Equipment.html
+  name: Equipment
+  nameWithType: Equipment
+  fullName: EquipmentMonitoring.Core.Models.Equipment

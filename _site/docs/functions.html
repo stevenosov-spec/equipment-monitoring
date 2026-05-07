@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Документация функций системы мониторинга оборудования </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Документация функций системы мониторинга оборудования ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="документация-функций-системы-мониторинга-оборудования">Документация функций системы мониторинга оборудования</h1>
+
+<h2 id="1-уровень-интеграции-equipmentmonitoringintegration">1. Уровень интеграции (EquipmentMonitoring.Integration)</h2>
+<h3 id="simulatedtagreader">SimulatedTagReader</h3>
+<p>Реализует интерфейс <code>ITagReader</code>. Имитирует поступление данных с промышленных датчиков, генерируя плавно меняющиеся значения с возвратом к среднему (mean reversion).</p>
+<ul>
+<li><strong>Конструктор</strong> – инициализирует словарь тегов (имя тега, min, max, среднее) и начальные значения.</li>
+<li><strong>Start()</strong> – запускает внутренний таймер с интервалом 1 секунду, который вызывает событие <code>TagValueChanged</code>.</li>
+<li><strong>Stop()</strong> – останавливает таймер и освобождает ресурсы.</li>
+<li><strong>GenerateGaussian(double mean, double stdDev, double min, double max)</strong> – статический вспомогательный метод генерации случайного числа с нормальным распределением.</li>
+<li><strong>Событие TagValueChanged</strong> – передаёт новое значение тега (<code>TagValueChangedEventArgs</code>).</li>
+</ul>
+<h2 id="2-бизнес-логика-equipmentmonitoringcore">2. Бизнес-логика (EquipmentMonitoring.Core)</h2>
+<h3 id="equipmentmonitorservice-iequipmentmonitor">EquipmentMonitorService (IEquipmentMonitor)</h3>
+<p>Центральный сервис мониторинга. Подписывается на события от <code>ITagReader</code>, обновляет параметры в БД, обнаруживает выход за границы допуска, создаёт отказы и управляет состоянием оборудования.</p>
+<ul>
+<li><strong>Start() / Stop()</strong> – запускает/останавливает получение данных.</li>
+<li><strong>OnTagValueChanged(object? sender, TagValueChangedEventArgs e)</strong> – обработчик нового значения тега: обновляет соответствующий параметр, проверяет границы, при выходе создаёт объект <code>Fault</code> и вызывает событие <code>OnFaultDetected</code>. Затем пересчитывает общее состояние оборудования (<code>Alarm</code>/<code>Normal</code>) и вызывает <code>OnStateChanged</code>.</li>
+<li><strong>DeterminePriority(Parameter param, double value)</strong> – статический метод, вычисляющий приоритет отказа на основе относительного отклонения от границ.</li>
+<li><strong>События</strong>:
+<ul>
+<li><code>OnFaultDetected</code> – уведомляет UI о новом отказе.</li>
+<li><code>OnStateChanged</code> – уведомляет об изменении состояния оборудования.</li>
+</ul>
+</li>
+</ul>
+<h3 id="reportservice-ireportgenerator">ReportService (IReportGenerator)</h3>
+<p>Генерирует Excel-отчёт по отказам за указанный период с помощью библиотеки ClosedXML.</p>
+<ul>
+<li><strong>GenerateFaultReport(DateTime from, DateTime to)</strong> – возвращает массив байт готового .xlsx файла. Включает столбцы: Дата/время, Оборудование, Описание, Приоритет, Статус.</li>
+</ul>
+<h3 id="oeeservice-ioeeservice">OeeService (IOeeService)</h3>
+<p>Рассчитывает показатели OEE (Overall Equipment Effectiveness) для конкретного оборудования за заданный интервал времени.</p>
+<ul>
+<li><strong>CalculateOeeAsync(int equipmentId, DateTime from, DateTime to)</strong> – асинхронно вычисляет доступность (по времени простоев из-за отказов), производительность (отношение текущего значения параметра к номинальному) и качество (заглушка = 1.0). Возвращает объект <code>OeeResult</code>.</li>
+</ul>
+<h3 id="historyservice-ihistoryservice">HistoryService (IHistoryService)</h3>
+<p>Предоставляет исторические данные параметра для построения трендов. В учебном прототипе генерирует синтетические точки на основе текущего значения с небольшим случайным разбросом.</p>
+<ul>
+<li><strong>GetHistoryAsync(int parameterId, DateTime from, DateTime to)</strong> – возвращает список <code>ParameterHistoryPoint</code> с шагом 10 минут.</li>
+</ul>
+<h3 id="модели-данных-coremodels">Модели данных (Core.Models)</h3>
+<ul>
+<li><strong>Equipment</strong> – единица оборудования (Id, Name, Type, Installation, CurrentState, списки Parameters и Faults).</li>
+<li><strong>Parameter</strong> – измеряемый параметр (Id, Name, Value, Timestamp, Unit, TagAddress, MinAllowed, MaxAllowed, NominalValue, связь с Equipment).</li>
+<li><strong>Fault</strong> – запись об отказе (Id, EquipmentId, StartTime, EndTime, Description, Priority, Status).</li>
+<li><strong>User</strong> – учётная запись пользователя (не используется в текущем прототипе, но присутствует).</li>
+</ul>
+<h3 id="перечисления-coreenums">Перечисления (Core.Enums)</h3>
+<ul>
+<li><strong>EquipmentState</strong> – Normal, Warning, Alarm, NoData.</li>
+<li><strong>FaultPriority</strong> – Low, Medium, High, Critical.</li>
+<li><strong>FaultStatus</strong> – Active, Acknowledged, Escalated, Closed.</li>
+</ul>
+<h3 id="контекст-базы-данных-appdbcontext">Контекст базы данных (AppDbContext)</h3>
+<p>Entity Framework Core DbContext. Содержит DbSet для Equipment, Parameter, Fault, User. Настроены связи: каскадное удаление параметров при удалении оборудования, и NoAction для Faults (история сохраняется). Используется фабрика <code>IDbContextFactory&lt;AppDbContext&gt;</code> для потокобезопасного создания контекста.</p>
+<h2 id="3-уровень-представления-equipmentmonitoringapp">3. Уровень представления (EquipmentMonitoring.App)</h2>
+<h3 id="mainviewmodel">MainViewModel</h3>
+<p>Главная ViewModel, управляющая состоянием и поведением основного окна.</p>
+<ul>
+<li><strong>Коллекции</strong>: Equipments, ActiveFaults, SelectedParameters.</li>
+<li><strong>Свойства</strong>: SelectedEquipment, данные OEE (CurrentOeeText и др.).</li>
+<li><strong>Команды</strong>: Start/StopMonitoring, AcknowledgeFault, GenerateReport, GenerateOeeReport, ShowTrend.</li>
+<li><strong>Методы</strong>:
+<ul>
+<li><code>LoadEquipments()</code> – загружает список оборудования из БД.</li>
+<li><code>StartMonitoring() / StopMonitoring()</code> – запускает/останавливает мониторинг.</li>
+<li><code>OnFaultDetected(Fault fault)</code> – добавляет новый отказ в начало списка.</li>
+<li><code>OnStateChanged(int equipmentId, EquipmentState newState)</code> – обновляет цвет плитки оборудования.</li>
+<li><code>AcknowledgeFault(FaultViewModel? faultVm)</code> – сохраняет статус отказа в БД, проверяет, остались ли активные отказы, и при необходимости переводит оборудование в Normal. Через 3 секунды удаляет отказ из списка.</li>
+<li><code>GenerateReport()</code> – экспорт отчёта по отказам в Excel.</li>
+<li><code>GenerateOeeReport()</code> – открывает диалог выбора периода, затем асинхронно генерирует сводный отчёт OEE для всех единиц оборудования.</li>
+<li><code>ShowTrend(ParameterViewModel? paramVm)</code> – открывает окно тренда.</li>
+<li><code>RefreshParametersAndOee()</code> – вызывается таймером каждую секунду, обновляет значения параметров и текущий OEE выбранного оборудования.</li>
+</ul>
+</li>
+</ul>
+<h3 id="дочерние-viewmodel">Дочерние ViewModel</h3>
+<ul>
+<li><strong>EquipmentViewModel</strong> – обёртка для Equipment с наблюдаемым свойством State.</li>
+<li><strong>FaultViewModel</strong> – обёртка для Fault с наблюдаемым статусом.</li>
+<li><strong>ParameterViewModel</strong> – обёртка для Parameter с наблюдаемыми Value, Timestamp и дополнительными MinAllowed, MaxAllowed.</li>
+<li><strong>TrendViewModel</strong> – управляет окном тренда: содержит список масштабов времени, даты начала/конца, команду Refresh, строит график OxyPlot с границами допуска (аннотации LineAnnotation).</li>
+</ul>
+<h3 id="окна">Окна</h3>
+<ul>
+<li><strong>MainWindow</strong> – главное окно с тремя панелями.</li>
+<li><strong>TrendWindow</strong> – окно для отображения графика тренда.</li>
+<li><strong>OeeDateRangeDialog</strong> – диалог выбора периода для отчёта OEE.</li>
+</ul>
+<h3 id="конвертер">Конвертер</h3>
+<ul>
+<li><strong>StateToColorConverter</strong> – преобразует EquipmentState в кисть соответствующего цвета для графического индикатора.</li>
+</ul>
+<h3 id="di-контейнер-appxamlcs">DI-контейнер (App.xaml.cs)</h3>
+<p>Регистрирует все сервисы и ViewModel, выполняет миграции БД, заполняет начальные данные (SeedData).</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/stevenosov-spec/equipment-monitoring/blob/main/docs/functions.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

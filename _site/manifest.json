@@ -1,0 +1,478 @@
+{
+  "source_base_path": "C:/Users/Admin/equipment-monitoring2",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Data.AppDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Data.AppDbContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Data.AppDbContext",
+      "Summary": "<p sourcefile=\"api/EquipmentMonitoring.Core.Data.AppDbContext.yml\" sourcestartlinenumber=\"1\">Контекст базы данных Entity Framework</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Data.DesignTimeDbContextFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Data.DesignTimeDbContextFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Data.DesignTimeDbContextFactory",
+      "Summary": "<p sourcefile=\"api/EquipmentMonitoring.Core.Data.DesignTimeDbContextFactory.yml\" sourcestartlinenumber=\"1\">Фабрика для создания контекста во время разработки (миграции)</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Data.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Data",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Enums.EquipmentState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Enums.EquipmentState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Enums.EquipmentState",
+      "Summary": "<p sourcefile=\"api/EquipmentMonitoring.Core.Enums.EquipmentState.yml\" sourcestartlinenumber=\"1\">Цветовая индикация состояния оборудования</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Enums.FaultPriority.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Enums.FaultPriority.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Enums.FaultPriority",
+      "Summary": "<p sourcefile=\"api/EquipmentMonitoring.Core.Enums.FaultPriority.yml\" sourcestartlinenumber=\"1\">Важность отказа</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Enums.FaultStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Enums.FaultStatus.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Enums.FaultStatus",
+      "Summary": "<p sourcefile=\"api/EquipmentMonitoring.Core.Enums.FaultStatus.yml\" sourcestartlinenumber=\"1\">Жизненный цикл отказа</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Enums.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Enums",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Migrations.AddNominalValueToParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Migrations.AddNominalValueToParameter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Migrations.AddNominalValueToParameter",
+      "Summary": "<p sourcefile=\"api/EquipmentMonitoring.Core.Migrations.AddNominalValueToParameter.yml\" sourcestartlinenumber=\"1\">A base class inherited by each EF Core migration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Migrations.InitialCreate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Migrations.InitialCreate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Migrations.InitialCreate",
+      "Summary": "<p sourcefile=\"api/EquipmentMonitoring.Core.Migrations.InitialCreate.yml\" sourcestartlinenumber=\"1\">A base class inherited by each EF Core migration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Migrations.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Migrations",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Models.Equipment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Models.Equipment.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Models.Equipment",
+      "Summary": "<p sourcefile=\"api/EquipmentMonitoring.Core.Models.Equipment.yml\" sourcestartlinenumber=\"1\">Единица технологического оборудования</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Models.Fault.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Models.Fault.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Models.Fault",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Models.Parameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Models.Parameter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Models.Parameter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Models.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Models.User.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Models.User",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Models.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Models",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Services.EquipmentMonitorService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Services.EquipmentMonitorService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Services.EquipmentMonitorService",
+      "Summary": "<p sourcefile=\"api/EquipmentMonitoring.Core.Services.EquipmentMonitorService.yml\" sourcestartlinenumber=\"1\">Центральный сервис мониторинга оборудования.\nПолучает данные от <xref href=\"EquipmentMonitoring.Core.Services.Interfaces.ITagReader\" data-throw-if-not-resolved=\"false\"></xref>, обновляет параметры в БД,\nобнаруживает выход за границы допуска и создаёт отказы.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Services.HistoryService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Services.HistoryService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Services.HistoryService",
+      "Summary": "<p sourcefile=\"api/EquipmentMonitoring.Core.Services.HistoryService.yml\" sourcestartlinenumber=\"1\">Заглушка истории параметров – генерирует случайные точки для демонстрации трендов</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor",
+      "Summary": "<p sourcefile=\"api/EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.yml\" sourcestartlinenumber=\"1\">Сервис мониторинга оборудования</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Services.Interfaces.IHistoryService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Services.Interfaces.IHistoryService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Services.Interfaces.IHistoryService",
+      "Summary": "<p sourcefile=\"api/EquipmentMonitoring.Core.Services.Interfaces.IHistoryService.yml\" sourcestartlinenumber=\"1\">Сервис для получения исторических данных параметра (для трендов)</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Services.Interfaces.IOeeService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Services.Interfaces.IOeeService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Services.Interfaces.IOeeService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator",
+      "Summary": "<p sourcefile=\"api/EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator.yml\" sourcestartlinenumber=\"1\">Генератор отчётов в формате Excel</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Services.Interfaces.ITagReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Services.Interfaces.ITagReader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Services.Interfaces.ITagReader",
+      "Summary": "<p sourcefile=\"api/EquipmentMonitoring.Core.Services.Interfaces.ITagReader.yml\" sourcestartlinenumber=\"1\">Источник данных (реальный или симулированный)</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Services.Interfaces.OeeResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Services.Interfaces.OeeResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Services.Interfaces.OeeResult",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Services.Interfaces.ParameterHistoryPoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Services.Interfaces.ParameterHistoryPoint.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Services.Interfaces.ParameterHistoryPoint",
+      "Summary": "<p sourcefile=\"api/EquipmentMonitoring.Core.Services.Interfaces.ParameterHistoryPoint.yml\" sourcestartlinenumber=\"1\">Одна точка исторических данных</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Services.Interfaces.TagValueChangedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Services.Interfaces.TagValueChangedEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Services.Interfaces.TagValueChangedEventArgs",
+      "Summary": "<p sourcefile=\"api/EquipmentMonitoring.Core.Services.Interfaces.TagValueChangedEventArgs.yml\" sourcestartlinenumber=\"1\">Аргументы события при получении нового значения тега</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Services.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Services.Interfaces.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Services.Interfaces",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Services.OeeService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Services.OeeService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Services.OeeService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Services.ReportService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Services.ReportService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Services.ReportService",
+      "Summary": "<p sourcefile=\"api/EquipmentMonitoring.Core.Services.ReportService.yml\" sourcestartlinenumber=\"1\">Генерация Excel-отчёта об отказах за период</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Core.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Core.Services.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Core.Services",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Integration.Simulation.SimulatedTagReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Integration.Simulation.SimulatedTagReader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Integration.Simulation.SimulatedTagReader",
+      "Summary": "<p sourcefile=\"api/EquipmentMonitoring.Integration.Simulation.SimulatedTagReader.yml\" sourcestartlinenumber=\"1\">Имитатор промышленных датчиков. Генерирует плавно меняющиеся значения\nс использованием случайного блуждания и возврата к среднему (mean reversion).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EquipmentMonitoring.Integration.Simulation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EquipmentMonitoring.Integration.Simulation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "EquipmentMonitoring.Integration.Simulation",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/functions.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/functions.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

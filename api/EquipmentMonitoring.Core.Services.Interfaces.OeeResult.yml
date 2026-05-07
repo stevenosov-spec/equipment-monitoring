@@ -1,0 +1,563 @@
+### YamlMime:ManagedReference
+items:
+- uid: EquipmentMonitoring.Core.Services.Interfaces.OeeResult
+  commentId: T:EquipmentMonitoring.Core.Services.Interfaces.OeeResult
+  id: OeeResult
+  parent: EquipmentMonitoring.Core.Services.Interfaces
+  children:
+  - EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Availability
+  - EquipmentMonitoring.Core.Services.Interfaces.OeeResult.EquipmentId
+  - EquipmentMonitoring.Core.Services.Interfaces.OeeResult.EquipmentName
+  - EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Oee
+  - EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Performance
+  - EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Quality
+  langs:
+  - csharp
+  - vb
+  name: OeeResult
+  nameWithType: OeeResult
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.OeeResult
+  type: Class
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IOeeService.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: OeeResult
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IOeeService.cs
+    startLine: 17
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services.Interfaces
+  syntax:
+    content: public class OeeResult
+    content.vb: Public Class OeeResult
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.EquipmentId
+  commentId: P:EquipmentMonitoring.Core.Services.Interfaces.OeeResult.EquipmentId
+  id: EquipmentId
+  parent: EquipmentMonitoring.Core.Services.Interfaces.OeeResult
+  langs:
+  - csharp
+  - vb
+  name: EquipmentId
+  nameWithType: OeeResult.EquipmentId
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.EquipmentId
+  type: Property
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IOeeService.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: EquipmentId
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IOeeService.cs
+    startLine: 19
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services.Interfaces
+  syntax:
+    content: public int EquipmentId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property EquipmentId As Integer
+  overload: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.EquipmentId*
+- uid: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.EquipmentName
+  commentId: P:EquipmentMonitoring.Core.Services.Interfaces.OeeResult.EquipmentName
+  id: EquipmentName
+  parent: EquipmentMonitoring.Core.Services.Interfaces.OeeResult
+  langs:
+  - csharp
+  - vb
+  name: EquipmentName
+  nameWithType: OeeResult.EquipmentName
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.EquipmentName
+  type: Property
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IOeeService.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: EquipmentName
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IOeeService.cs
+    startLine: 20
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services.Interfaces
+  syntax:
+    content: public string EquipmentName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EquipmentName As String
+  overload: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.EquipmentName*
+- uid: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Availability
+  commentId: P:EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Availability
+  id: Availability
+  parent: EquipmentMonitoring.Core.Services.Interfaces.OeeResult
+  langs:
+  - csharp
+  - vb
+  name: Availability
+  nameWithType: OeeResult.Availability
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Availability
+  type: Property
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IOeeService.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Availability
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IOeeService.cs
+    startLine: 21
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services.Interfaces
+  syntax:
+    content: public double Availability { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Availability As Double
+  overload: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Availability*
+- uid: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Performance
+  commentId: P:EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Performance
+  id: Performance
+  parent: EquipmentMonitoring.Core.Services.Interfaces.OeeResult
+  langs:
+  - csharp
+  - vb
+  name: Performance
+  nameWithType: OeeResult.Performance
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Performance
+  type: Property
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IOeeService.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Performance
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IOeeService.cs
+    startLine: 22
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services.Interfaces
+  syntax:
+    content: public double Performance { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Performance As Double
+  overload: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Performance*
+- uid: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Quality
+  commentId: P:EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Quality
+  id: Quality
+  parent: EquipmentMonitoring.Core.Services.Interfaces.OeeResult
+  langs:
+  - csharp
+  - vb
+  name: Quality
+  nameWithType: OeeResult.Quality
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Quality
+  type: Property
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IOeeService.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Quality
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IOeeService.cs
+    startLine: 23
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services.Interfaces
+  syntax:
+    content: public double Quality { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Quality As Double
+  overload: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Quality*
+- uid: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Oee
+  commentId: P:EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Oee
+  id: Oee
+  parent: EquipmentMonitoring.Core.Services.Interfaces.OeeResult
+  langs:
+  - csharp
+  - vb
+  name: Oee
+  nameWithType: OeeResult.Oee
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Oee
+  type: Property
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IOeeService.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Oee
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IOeeService.cs
+    startLine: 24
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services.Interfaces
+  syntax:
+    content: public double Oee { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property Oee As Double
+  overload: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Oee*
+references:
+- uid: EquipmentMonitoring.Core.Services.Interfaces
+  commentId: N:EquipmentMonitoring.Core.Services.Interfaces
+  href: EquipmentMonitoring.html
+  name: EquipmentMonitoring.Core.Services.Interfaces
+  nameWithType: EquipmentMonitoring.Core.Services.Interfaces
+  fullName: EquipmentMonitoring.Core.Services.Interfaces
+  spec.csharp:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services
+    name: Services
+    href: EquipmentMonitoring.Core.Services.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services.Interfaces
+    name: Interfaces
+    href: EquipmentMonitoring.Core.Services.Interfaces.html
+  spec.vb:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services
+    name: Services
+    href: EquipmentMonitoring.Core.Services.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services.Interfaces
+    name: Interfaces
+    href: EquipmentMonitoring.Core.Services.Interfaces.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.EquipmentId*
+  commentId: Overload:EquipmentMonitoring.Core.Services.Interfaces.OeeResult.EquipmentId
+  href: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.html#EquipmentMonitoring_Core_Services_Interfaces_OeeResult_EquipmentId
+  name: EquipmentId
+  nameWithType: OeeResult.EquipmentId
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.EquipmentId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.EquipmentName*
+  commentId: Overload:EquipmentMonitoring.Core.Services.Interfaces.OeeResult.EquipmentName
+  href: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.html#EquipmentMonitoring_Core_Services_Interfaces_OeeResult_EquipmentName
+  name: EquipmentName
+  nameWithType: OeeResult.EquipmentName
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.EquipmentName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Availability*
+  commentId: Overload:EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Availability
+  href: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.html#EquipmentMonitoring_Core_Services_Interfaces_OeeResult_Availability
+  name: Availability
+  nameWithType: OeeResult.Availability
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Availability
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Performance*
+  commentId: Overload:EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Performance
+  href: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.html#EquipmentMonitoring_Core_Services_Interfaces_OeeResult_Performance
+  name: Performance
+  nameWithType: OeeResult.Performance
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Performance
+- uid: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Quality*
+  commentId: Overload:EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Quality
+  href: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.html#EquipmentMonitoring_Core_Services_Interfaces_OeeResult_Quality
+  name: Quality
+  nameWithType: OeeResult.Quality
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Quality
+- uid: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Oee*
+  commentId: Overload:EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Oee
+  href: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.html#EquipmentMonitoring_Core_Services_Interfaces_OeeResult_Oee
+  name: Oee
+  nameWithType: OeeResult.Oee
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.OeeResult.Oee

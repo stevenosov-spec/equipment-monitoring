@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator
+  commentId: T:EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator
+  id: IReportGenerator
+  parent: EquipmentMonitoring.Core.Services.Interfaces
+  children:
+  - EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator.GenerateFaultReport(System.DateTime,System.DateTime)
+  langs:
+  - csharp
+  - vb
+  name: IReportGenerator
+  nameWithType: IReportGenerator
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator
+  type: Interface
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IReportGenerator.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: IReportGenerator
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IReportGenerator.cs
+    startLine: 5
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services.Interfaces
+  summary: Генератор отчётов в формате Excel
+  example: []
+  syntax:
+    content: public interface IReportGenerator
+    content.vb: Public Interface IReportGenerator
+  derivedClasses:
+  - EquipmentMonitoring.Core.Services.ReportService
+- uid: EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator.GenerateFaultReport(System.DateTime,System.DateTime)
+  commentId: M:EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator.GenerateFaultReport(System.DateTime,System.DateTime)
+  id: GenerateFaultReport(System.DateTime,System.DateTime)
+  parent: EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator
+  langs:
+  - csharp
+  - vb
+  name: GenerateFaultReport(DateTime, DateTime)
+  nameWithType: IReportGenerator.GenerateFaultReport(DateTime, DateTime)
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator.GenerateFaultReport(System.DateTime, System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IReportGenerator.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: GenerateFaultReport
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IReportGenerator.cs
+    startLine: 7
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services.Interfaces
+  syntax:
+    content: byte[] GenerateFaultReport(DateTime from, DateTime to)
+    parameters:
+    - id: from
+      type: System.DateTime
+    - id: to
+      type: System.DateTime
+    return:
+      type: System.Byte[]
+    content.vb: Function GenerateFaultReport(from As Date, [to] As Date) As Byte()
+  overload: EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator.GenerateFaultReport*
+  nameWithType.vb: IReportGenerator.GenerateFaultReport(Date, Date)
+  fullName.vb: EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator.GenerateFaultReport(Date, Date)
+  name.vb: GenerateFaultReport(Date, Date)
+references:
+- uid: EquipmentMonitoring.Core.Services.Interfaces
+  commentId: N:EquipmentMonitoring.Core.Services.Interfaces
+  href: EquipmentMonitoring.html
+  name: EquipmentMonitoring.Core.Services.Interfaces
+  nameWithType: EquipmentMonitoring.Core.Services.Interfaces
+  fullName: EquipmentMonitoring.Core.Services.Interfaces
+  spec.csharp:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services
+    name: Services
+    href: EquipmentMonitoring.Core.Services.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services.Interfaces
+    name: Interfaces
+    href: EquipmentMonitoring.Core.Services.Interfaces.html
+  spec.vb:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services
+    name: Services
+    href: EquipmentMonitoring.Core.Services.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services.Interfaces
+    name: Interfaces
+    href: EquipmentMonitoring.Core.Services.Interfaces.html
+- uid: EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator.GenerateFaultReport*
+  commentId: Overload:EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator.GenerateFaultReport
+  href: EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator.html#EquipmentMonitoring_Core_Services_Interfaces_IReportGenerator_GenerateFaultReport_System_DateTime_System_DateTime_
+  name: GenerateFaultReport
+  nameWithType: IReportGenerator.GenerateFaultReport
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator.GenerateFaultReport
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

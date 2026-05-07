@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: EquipmentMonitoring.Core.Services
+  commentId: N:EquipmentMonitoring.Core.Services
+  id: EquipmentMonitoring.Core.Services
+  children:
+  - EquipmentMonitoring.Core.Services.EquipmentMonitorService
+  - EquipmentMonitoring.Core.Services.HistoryService
+  - EquipmentMonitoring.Core.Services.OeeService
+  - EquipmentMonitoring.Core.Services.ReportService
+  langs:
+  - csharp
+  - vb
+  name: EquipmentMonitoring.Core.Services
+  nameWithType: EquipmentMonitoring.Core.Services
+  fullName: EquipmentMonitoring.Core.Services
+  type: Namespace
+  assemblies:
+  - EquipmentMonitoring.Core
+references:
+- uid: EquipmentMonitoring.Core.Services.EquipmentMonitorService
+  commentId: T:EquipmentMonitoring.Core.Services.EquipmentMonitorService
+  href: EquipmentMonitoring.Core.Services.EquipmentMonitorService.html
+  name: EquipmentMonitorService
+  nameWithType: EquipmentMonitorService
+  fullName: EquipmentMonitoring.Core.Services.EquipmentMonitorService
+- uid: EquipmentMonitoring.Core.Services.HistoryService
+  commentId: T:EquipmentMonitoring.Core.Services.HistoryService
+  href: EquipmentMonitoring.Core.Services.HistoryService.html
+  name: HistoryService
+  nameWithType: HistoryService
+  fullName: EquipmentMonitoring.Core.Services.HistoryService
+- uid: EquipmentMonitoring.Core.Services.OeeService
+  commentId: T:EquipmentMonitoring.Core.Services.OeeService
+  href: EquipmentMonitoring.Core.Services.OeeService.html
+  name: OeeService
+  nameWithType: OeeService
+  fullName: EquipmentMonitoring.Core.Services.OeeService
+- uid: EquipmentMonitoring.Core.Services.ReportService
+  commentId: T:EquipmentMonitoring.Core.Services.ReportService
+  href: EquipmentMonitoring.Core.Services.ReportService.html
+  name: ReportService
+  nameWithType: ReportService
+  fullName: EquipmentMonitoring.Core.Services.ReportService

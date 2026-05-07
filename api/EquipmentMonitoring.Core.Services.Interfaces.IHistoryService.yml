@@ -1,0 +1,257 @@
+### YamlMime:ManagedReference
+items:
+- uid: EquipmentMonitoring.Core.Services.Interfaces.IHistoryService
+  commentId: T:EquipmentMonitoring.Core.Services.Interfaces.IHistoryService
+  id: IHistoryService
+  parent: EquipmentMonitoring.Core.Services.Interfaces
+  children:
+  - EquipmentMonitoring.Core.Services.Interfaces.IHistoryService.GetHistoryAsync(System.Int32,System.DateTime,System.DateTime)
+  langs:
+  - csharp
+  - vb
+  name: IHistoryService
+  nameWithType: IHistoryService
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.IHistoryService
+  type: Interface
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IHistoryService.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: IHistoryService
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IHistoryService.cs
+    startLine: 7
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services.Interfaces
+  summary: Сервис для получения исторических данных параметра (для трендов)
+  example: []
+  syntax:
+    content: public interface IHistoryService
+    content.vb: Public Interface IHistoryService
+  derivedClasses:
+  - EquipmentMonitoring.Core.Services.HistoryService
+- uid: EquipmentMonitoring.Core.Services.Interfaces.IHistoryService.GetHistoryAsync(System.Int32,System.DateTime,System.DateTime)
+  commentId: M:EquipmentMonitoring.Core.Services.Interfaces.IHistoryService.GetHistoryAsync(System.Int32,System.DateTime,System.DateTime)
+  id: GetHistoryAsync(System.Int32,System.DateTime,System.DateTime)
+  parent: EquipmentMonitoring.Core.Services.Interfaces.IHistoryService
+  langs:
+  - csharp
+  - vb
+  name: GetHistoryAsync(int, DateTime, DateTime)
+  nameWithType: IHistoryService.GetHistoryAsync(int, DateTime, DateTime)
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.IHistoryService.GetHistoryAsync(int, System.DateTime, System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IHistoryService.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: GetHistoryAsync
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/IHistoryService.cs
+    startLine: 9
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services.Interfaces
+  syntax:
+    content: Task<List<ParameterHistoryPoint>> GetHistoryAsync(int parameterId, DateTime from, DateTime to)
+    parameters:
+    - id: parameterId
+      type: System.Int32
+    - id: from
+      type: System.DateTime
+    - id: to
+      type: System.DateTime
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{EquipmentMonitoring.Core.Services.Interfaces.ParameterHistoryPoint}}
+    content.vb: Function GetHistoryAsync(parameterId As Integer, from As Date, [to] As Date) As Task(Of List(Of ParameterHistoryPoint))
+  overload: EquipmentMonitoring.Core.Services.Interfaces.IHistoryService.GetHistoryAsync*
+  nameWithType.vb: IHistoryService.GetHistoryAsync(Integer, Date, Date)
+  fullName.vb: EquipmentMonitoring.Core.Services.Interfaces.IHistoryService.GetHistoryAsync(Integer, Date, Date)
+  name.vb: GetHistoryAsync(Integer, Date, Date)
+references:
+- uid: EquipmentMonitoring.Core.Services.Interfaces
+  commentId: N:EquipmentMonitoring.Core.Services.Interfaces
+  href: EquipmentMonitoring.html
+  name: EquipmentMonitoring.Core.Services.Interfaces
+  nameWithType: EquipmentMonitoring.Core.Services.Interfaces
+  fullName: EquipmentMonitoring.Core.Services.Interfaces
+  spec.csharp:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services
+    name: Services
+    href: EquipmentMonitoring.Core.Services.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services.Interfaces
+    name: Interfaces
+    href: EquipmentMonitoring.Core.Services.Interfaces.html
+  spec.vb:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services
+    name: Services
+    href: EquipmentMonitoring.Core.Services.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services.Interfaces
+    name: Interfaces
+    href: EquipmentMonitoring.Core.Services.Interfaces.html
+- uid: EquipmentMonitoring.Core.Services.Interfaces.IHistoryService.GetHistoryAsync*
+  commentId: Overload:EquipmentMonitoring.Core.Services.Interfaces.IHistoryService.GetHistoryAsync
+  href: EquipmentMonitoring.Core.Services.Interfaces.IHistoryService.html#EquipmentMonitoring_Core_Services_Interfaces_IHistoryService_GetHistoryAsync_System_Int32_System_DateTime_System_DateTime_
+  name: GetHistoryAsync
+  nameWithType: IHistoryService.GetHistoryAsync
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.IHistoryService.GetHistoryAsync
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{EquipmentMonitoring.Core.Services.Interfaces.ParameterHistoryPoint}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{EquipmentMonitoring.Core.Services.Interfaces.ParameterHistoryPoint}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<ParameterHistoryPoint>>
+  nameWithType: Task<List<ParameterHistoryPoint>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<EquipmentMonitoring.Core.Services.Interfaces.ParameterHistoryPoint>>
+  nameWithType.vb: Task(Of List(Of ParameterHistoryPoint))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of EquipmentMonitoring.Core.Services.Interfaces.ParameterHistoryPoint))
+  name.vb: Task(Of List(Of ParameterHistoryPoint))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: EquipmentMonitoring.Core.Services.Interfaces.ParameterHistoryPoint
+    name: ParameterHistoryPoint
+    href: EquipmentMonitoring.Core.Services.Interfaces.ParameterHistoryPoint.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: EquipmentMonitoring.Core.Services.Interfaces.ParameterHistoryPoint
+    name: ParameterHistoryPoint
+    href: EquipmentMonitoring.Core.Services.Interfaces.ParameterHistoryPoint.html
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

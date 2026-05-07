@@ -3,7 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using EquipmentMonitoring.Core.Data;
 using EquipmentMonitoring.Core.Enums;
 using EquipmentMonitoring.Core.Models;
-using EquipmentMonitoring.Core.Services;            // <-- для OeeService
+using EquipmentMonitoring.Core.Services;            // для OeeService
 using EquipmentMonitoring.Core.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Win32;
@@ -17,6 +17,10 @@ using EquipmentMonitoring.App.Views;
 
 namespace EquipmentMonitoring.App.ViewModels
 {
+    /// <summary>
+    /// Главная ViewModel приложения. Управляет списком оборудования, отказов, параметров,
+    /// а также содержит команды для мониторинга, отчётов и отображения трендов.
+    /// </summary>
     public partial class MainViewModel : ObservableObject
     {
         private readonly IEquipmentMonitor _monitor;
@@ -26,32 +30,84 @@ namespace EquipmentMonitoring.App.ViewModels
         private readonly IOeeService _oeeService;
         private readonly System.Timers.Timer _refreshTimer;
 
+        /// <summary>
+        /// Коллекция всех единиц оборудования.
+        /// </summary>
         public ObservableCollection<EquipmentViewModel> Equipments { get; } = new();
+
+        /// <summary>
+        /// Коллекция активных отказов (отображается в правой панели).
+        /// </summary>
         public ObservableCollection<FaultViewModel> ActiveFaults { get; } = new();
+
+        /// <summary>
+        /// Коллекция параметров выбранного оборудования (для таблицы).
+        /// </summary>
         public ObservableCollection<ParameterViewModel> SelectedParameters { get; } = new();
 
+        /// <summary>
+        /// Выбранное в левом списке оборудование.
+        /// </summary>
         [ObservableProperty]
         private EquipmentViewModel? selectedEquipment;
 
+        /// <summary>
+        /// Текущее значение OEE (строка с процентами).
+        /// </summary>
         [ObservableProperty]
         private string currentOeeText = "Нет данных";
 
+        /// <summary>
+        /// Текст текущей доступности.
+        /// </summary>
         [ObservableProperty]
         private string currentAvailabilityText = "";
 
+        /// <summary>
+        /// Текст текущей производительности.
+        /// </summary>
         [ObservableProperty]
         private string currentPerformanceText = "";
 
+        /// <summary>
+        /// Текст текущего качества.
+        /// </summary>
         [ObservableProperty]
         private string currentQualityText = "";
 
+        /// <summary>
+        /// Команда запуска мониторинга.
+        /// </summary>
         public IRelayCommand StartMonitoringCommand { get; }
+
+        /// <summary>
+        /// Команда остановки мониторинга.
+        /// </summary>
         public IRelayCommand StopMonitoringCommand { get; }
+
+        /// <summary>
+        /// Команда подтверждения отказа.
+        /// </summary>
         public IRelayCommand<FaultViewModel> AcknowledgeFaultCommand { get; }
+
+        /// <summary>
+        /// Команда генерации отчёта по отказам.
+        /// </summary>
         public IRelayCommand GenerateReportCommand { get; }
+
+        /// <summary>
+        /// Команда генерации сводного отчёта OEE.
+        /// </summary>
         public IRelayCommand GenerateOeeReportCommand { get; }
+
+        /// <summary>
+        /// Команда отображения тренда для выбранного параметра.
+        /// </summary>
         public IRelayCommand<ParameterViewModel> ShowTrendCommand { get; }
 
+        /// <summary>
+        /// Инициализирует главную ViewModel.
+        /// </summary>
         public MainViewModel(IEquipmentMonitor monitor,
                              IReportGenerator reportGenerator,
                              IDbContextFactory<AppDbContext> dbFactory,
@@ -81,6 +137,9 @@ namespace EquipmentMonitoring.App.ViewModels
             _refreshTimer.Start();
         }
 
+        /// <summary>
+        /// Загружает список всего оборудования из базы данных.
+        /// </summary>
         private async void LoadEquipments()
         {
             await using var db = await _dbFactory.CreateDbContextAsync();
@@ -88,9 +147,21 @@ namespace EquipmentMonitoring.App.ViewModels
             foreach (var eq in list) Equipments.Add(new EquipmentViewModel(eq));
         }
 
+        /// <summary>
+        /// Запускает мониторинг.
+        /// </summary>
         private void StartMonitoring() => _monitor.Start();
+
+        /// <summary>
+        /// Останавливает мониторинг.
+        /// </summary>
         private void StopMonitoring() => _monitor.Stop();
 
+        /// <summary>
+        /// Обработчик изменения состояния оборудования. Обновляет UI в потоке диспетчера.
+        /// </summary>
+        /// <param name="equipmentId">Идентификатор оборудования.</param>
+        /// <param name="newState">Новое состояние.</param>
         private void OnStateChanged(int equipmentId, EquipmentState newState)
         {
             Application.Current.Dispatcher.Invoke(() =>
@@ -100,11 +171,20 @@ namespace EquipmentMonitoring.App.ViewModels
             });
         }
 
+        /// <summary>
+        /// Обработчик обнаружения нового отказа. Добавляет отказ в начало списка активных.
+        /// </summary>
+        /// <param name="fault">Обнаруженный отказ.</param>
         private void OnFaultDetected(Fault fault)
         {
             Application.Current.Dispatcher.Invoke(() => ActiveFaults.Insert(0, new FaultViewModel(fault)));
         }
 
+        /// <summary>
+        /// Подтверждает отказ, сохраняет его статус в БД, проверяет, остались ли активные отказы у оборудования,
+        /// и при необходимости возвращает его в нормальное состояние. Через 3 секунды удаляет отказ из списка.
+        /// </summary>
+        /// <param name="faultVm">ViewModel отказа, который требуется подтвердить.</param>
         private async void AcknowledgeFault(FaultViewModel? faultVm)
         {
             if (faultVm == null) return;
@@ -138,6 +218,9 @@ namespace EquipmentMonitoring.App.ViewModels
             });
         }
 
+        /// <summary>
+        /// Генерирует и сохраняет Excel-отчёт по отказам за последнюю неделю.
+        /// </summary>
         private void GenerateReport()
         {
             var data = _reportGenerator.GenerateFaultReport(DateTime.Now.AddDays(-7), DateTime.Now);
@@ -146,12 +229,11 @@ namespace EquipmentMonitoring.App.ViewModels
         }
 
         /// <summary>
-        /// Асинхронный метод генерации сводного отчёта OEE за произвольный период.
-        /// Не блокирует интерфейс.
+        /// Генерирует Excel-отчёт по OEE для всех единиц оборудования за произвольный период,
+        /// выбранный пользователем через диалоговое окно <see cref="OeeDateRangeDialog"/>.
         /// </summary>
         private async void GenerateOeeReport()
         {
-            // 1. Диалог выбора дат
             var dateDialog = new OeeDateRangeDialog();
             dateDialog.Owner = Application.Current.MainWindow;
             if (dateDialog.ShowDialog() != true) return;
@@ -159,14 +241,11 @@ namespace EquipmentMonitoring.App.ViewModels
             DateTime start = dateDialog.StartDate;
             DateTime end = dateDialog.EndDate;
 
-            // 2. Путь для сохранения Excel
             var saveDialog = new SaveFileDialog { Filter = "Excel Files|*.xlsx", FileName = "OeeReport.xlsx" };
             if (saveDialog.ShowDialog() != true) return;
 
-            // 3. Получаем список оборудования
             using var db = _dbFactory.CreateDbContext();
             var equipments = db.Equipments.ToList();
-
             using var workbook = new ClosedXML.Excel.XLWorkbook();
             var ws = workbook.Worksheets.Add("ОЕЕ");
             ws.Cell(1, 1).Value = "Оборудование";
@@ -177,12 +256,11 @@ namespace EquipmentMonitoring.App.ViewModels
             ws.Cell(1, 6).Value = "Качество";
             ws.Cell(1, 7).Value = "OEE";
 
-            var oeeCalc = new OeeService(_dbFactory);   // можно использовать DI-сервис _oeeService, но он завязан на IOeeService, а нам нужен конкретный метод с датами
+            var oeeCalc = new OeeService(_dbFactory);
 
             for (int i = 0; i < equipments.Count; i++)
             {
                 var eq = equipments[i];
-                // Асинхронный вызов без блокировки UI
                 var result = await oeeCalc.CalculateOeeAsync(eq.Id, start, end);
                 if (result != null)
                 {
@@ -204,6 +282,10 @@ namespace EquipmentMonitoring.App.ViewModels
             MessageBox.Show("Сводный отчёт по ОЕЕ сохранён!", "Готово", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
+        /// <summary>
+        /// Открывает окно тренда для выбранного параметра.
+        /// </summary>
+        /// <param name="paramVm">ViewModel параметра, содержащий Id, имя и границы допуска.</param>
         private void ShowTrend(ParameterViewModel? paramVm)
         {
             if (paramVm == null) return;
@@ -228,6 +310,10 @@ namespace EquipmentMonitoring.App.ViewModels
             if (value != null) LoadParametersForEquipment(value.Id);
         }
 
+        /// <summary>
+        /// Загружает параметры выбранного оборудования в коллекцию для таблицы.
+        /// </summary>
+        /// <param name="equipmentId">Идентификатор оборудования.</param>
         private async void LoadParametersForEquipment(int equipmentId)
         {
             SelectedParameters.Clear();
@@ -236,6 +322,9 @@ namespace EquipmentMonitoring.App.ViewModels
             foreach (var p in parameters) SelectedParameters.Add(new ParameterViewModel(p));
         }
 
+        /// <summary>
+        /// Обновляет значения параметров и текущий OEE (за последний час) для выбранного оборудования.
+        /// </summary>
         private async void RefreshParametersAndOee()
         {
             if (SelectedEquipment != null)

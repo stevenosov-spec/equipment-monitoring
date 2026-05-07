@@ -1,0 +1,103 @@
+### YamlMime:TableOfContent
+items:
+- uid: EquipmentMonitoring.Core.Data
+  name: EquipmentMonitoring.Core.Data
+  type: Namespace
+  items:
+  - uid: EquipmentMonitoring.Core.Data.AppDbContext
+    name: AppDbContext
+    type: Class
+  - uid: EquipmentMonitoring.Core.Data.DesignTimeDbContextFactory
+    name: DesignTimeDbContextFactory
+    type: Class
+- uid: EquipmentMonitoring.Core.Enums
+  name: EquipmentMonitoring.Core.Enums
+  type: Namespace
+  items:
+  - uid: EquipmentMonitoring.Core.Enums.EquipmentState
+    name: EquipmentState
+    type: Enum
+  - uid: EquipmentMonitoring.Core.Enums.FaultPriority
+    name: FaultPriority
+    type: Enum
+  - uid: EquipmentMonitoring.Core.Enums.FaultStatus
+    name: FaultStatus
+    type: Enum
+- uid: EquipmentMonitoring.Core.Migrations
+  name: EquipmentMonitoring.Core.Migrations
+  type: Namespace
+  items:
+  - uid: EquipmentMonitoring.Core.Migrations.AddNominalValueToParameter
+    name: AddNominalValueToParameter
+    type: Class
+  - uid: EquipmentMonitoring.Core.Migrations.InitialCreate
+    name: InitialCreate
+    type: Class
+- uid: EquipmentMonitoring.Core.Models
+  name: EquipmentMonitoring.Core.Models
+  type: Namespace
+  items:
+  - uid: EquipmentMonitoring.Core.Models.Equipment
+    name: Equipment
+    type: Class
+  - uid: EquipmentMonitoring.Core.Models.Fault
+    name: Fault
+    type: Class
+  - uid: EquipmentMonitoring.Core.Models.Parameter
+    name: Parameter
+    type: Class
+  - uid: EquipmentMonitoring.Core.Models.User
+    name: User
+    type: Class
+- uid: EquipmentMonitoring.Core.Services
+  name: EquipmentMonitoring.Core.Services
+  type: Namespace
+  items:
+  - uid: EquipmentMonitoring.Core.Services.EquipmentMonitorService
+    name: EquipmentMonitorService
+    type: Class
+  - uid: EquipmentMonitoring.Core.Services.HistoryService
+    name: HistoryService
+    type: Class
+  - uid: EquipmentMonitoring.Core.Services.OeeService
+    name: OeeService
+    type: Class
+  - uid: EquipmentMonitoring.Core.Services.ReportService
+    name: ReportService
+    type: Class
+- uid: EquipmentMonitoring.Core.Services.Interfaces
+  name: EquipmentMonitoring.Core.Services.Interfaces
+  type: Namespace
+  items:
+  - uid: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor
+    name: IEquipmentMonitor
+    type: Interface
+  - uid: EquipmentMonitoring.Core.Services.Interfaces.IHistoryService
+    name: IHistoryService
+    type: Interface
+  - uid: EquipmentMonitoring.Core.Services.Interfaces.IOeeService
+    name: IOeeService
+    type: Interface
+  - uid: EquipmentMonitoring.Core.Services.Interfaces.IReportGenerator
+    name: IReportGenerator
+    type: Interface
+  - uid: EquipmentMonitoring.Core.Services.Interfaces.ITagReader
+    name: ITagReader
+    type: Interface
+  - uid: EquipmentMonitoring.Core.Services.Interfaces.OeeResult
+    name: OeeResult
+    type: Class
+  - uid: EquipmentMonitoring.Core.Services.Interfaces.ParameterHistoryPoint
+    name: ParameterHistoryPoint
+    type: Class
+  - uid: EquipmentMonitoring.Core.Services.Interfaces.TagValueChangedEventArgs
+    name: TagValueChangedEventArgs
+    type: Class
+- uid: EquipmentMonitoring.Integration.Simulation
+  name: EquipmentMonitoring.Integration.Simulation
+  type: Namespace
+  items:
+  - uid: EquipmentMonitoring.Integration.Simulation.SimulatedTagReader
+    name: SimulatedTagReader
+    type: Class
+memberLayout: SamePage

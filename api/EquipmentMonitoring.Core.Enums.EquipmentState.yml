@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: EquipmentMonitoring.Core.Enums.EquipmentState
+  commentId: T:EquipmentMonitoring.Core.Enums.EquipmentState
+  id: EquipmentState
+  parent: EquipmentMonitoring.Core.Enums
+  children:
+  - EquipmentMonitoring.Core.Enums.EquipmentState.Alarm
+  - EquipmentMonitoring.Core.Enums.EquipmentState.NoData
+  - EquipmentMonitoring.Core.Enums.EquipmentState.Normal
+  - EquipmentMonitoring.Core.Enums.EquipmentState.Warning
+  langs:
+  - csharp
+  - vb
+  name: EquipmentState
+  nameWithType: EquipmentState
+  fullName: EquipmentMonitoring.Core.Enums.EquipmentState
+  type: Enum
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/EquipmentState.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: EquipmentState
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/EquipmentState.cs
+    startLine: 3
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Enums
+  summary: Цветовая индикация состояния оборудования
+  example: []
+  syntax:
+    content: public enum EquipmentState
+    content.vb: Public Enum EquipmentState
+- uid: EquipmentMonitoring.Core.Enums.EquipmentState.Normal
+  commentId: F:EquipmentMonitoring.Core.Enums.EquipmentState.Normal
+  id: Normal
+  parent: EquipmentMonitoring.Core.Enums.EquipmentState
+  langs:
+  - csharp
+  - vb
+  name: Normal
+  nameWithType: EquipmentState.Normal
+  fullName: EquipmentMonitoring.Core.Enums.EquipmentState.Normal
+  type: Field
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/EquipmentState.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Normal
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/EquipmentState.cs
+    startLine: 3
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Enums
+  syntax:
+    content: Normal = 0
+    return:
+      type: EquipmentMonitoring.Core.Enums.EquipmentState
+- uid: EquipmentMonitoring.Core.Enums.EquipmentState.Warning
+  commentId: F:EquipmentMonitoring.Core.Enums.EquipmentState.Warning
+  id: Warning
+  parent: EquipmentMonitoring.Core.Enums.EquipmentState
+  langs:
+  - csharp
+  - vb
+  name: Warning
+  nameWithType: EquipmentState.Warning
+  fullName: EquipmentMonitoring.Core.Enums.EquipmentState.Warning
+  type: Field
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/EquipmentState.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Warning
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/EquipmentState.cs
+    startLine: 3
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Enums
+  syntax:
+    content: Warning = 1
+    return:
+      type: EquipmentMonitoring.Core.Enums.EquipmentState
+- uid: EquipmentMonitoring.Core.Enums.EquipmentState.Alarm
+  commentId: F:EquipmentMonitoring.Core.Enums.EquipmentState.Alarm
+  id: Alarm
+  parent: EquipmentMonitoring.Core.Enums.EquipmentState
+  langs:
+  - csharp
+  - vb
+  name: Alarm
+  nameWithType: EquipmentState.Alarm
+  fullName: EquipmentMonitoring.Core.Enums.EquipmentState.Alarm
+  type: Field
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/EquipmentState.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Alarm
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/EquipmentState.cs
+    startLine: 3
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Enums
+  syntax:
+    content: Alarm = 2
+    return:
+      type: EquipmentMonitoring.Core.Enums.EquipmentState
+- uid: EquipmentMonitoring.Core.Enums.EquipmentState.NoData
+  commentId: F:EquipmentMonitoring.Core.Enums.EquipmentState.NoData
+  id: NoData
+  parent: EquipmentMonitoring.Core.Enums.EquipmentState
+  langs:
+  - csharp
+  - vb
+  name: NoData
+  nameWithType: EquipmentState.NoData
+  fullName: EquipmentMonitoring.Core.Enums.EquipmentState.NoData
+  type: Field
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/EquipmentState.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: NoData
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/EquipmentState.cs
+    startLine: 3
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Enums
+  syntax:
+    content: NoData = 3
+    return:
+      type: EquipmentMonitoring.Core.Enums.EquipmentState
+references:
+- uid: EquipmentMonitoring.Core.Enums
+  commentId: N:EquipmentMonitoring.Core.Enums
+  href: EquipmentMonitoring.html
+  name: EquipmentMonitoring.Core.Enums
+  nameWithType: EquipmentMonitoring.Core.Enums
+  fullName: EquipmentMonitoring.Core.Enums
+  spec.csharp:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Enums
+    name: Enums
+    href: EquipmentMonitoring.Core.Enums.html
+  spec.vb:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Enums
+    name: Enums
+    href: EquipmentMonitoring.Core.Enums.html
+- uid: EquipmentMonitoring.Core.Enums.EquipmentState
+  commentId: T:EquipmentMonitoring.Core.Enums.EquipmentState
+  parent: EquipmentMonitoring.Core.Enums
+  href: EquipmentMonitoring.Core.Enums.EquipmentState.html
+  name: EquipmentState
+  nameWithType: EquipmentState
+  fullName: EquipmentMonitoring.Core.Enums.EquipmentState

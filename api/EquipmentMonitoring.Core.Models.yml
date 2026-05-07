@@ -1,0 +1,75 @@
+### YamlMime:ManagedReference
+items:
+- uid: EquipmentMonitoring.Core.Models
+  commentId: N:EquipmentMonitoring.Core.Models
+  id: EquipmentMonitoring.Core.Models
+  children:
+  - EquipmentMonitoring.Core.Models.Equipment
+  - EquipmentMonitoring.Core.Models.Fault
+  - EquipmentMonitoring.Core.Models.Parameter
+  - EquipmentMonitoring.Core.Models.User
+  langs:
+  - csharp
+  - vb
+  name: EquipmentMonitoring.Core.Models
+  nameWithType: EquipmentMonitoring.Core.Models
+  fullName: EquipmentMonitoring.Core.Models
+  type: Namespace
+  assemblies:
+  - EquipmentMonitoring.Core
+references:
+- uid: EquipmentMonitoring.Core.Models.Equipment
+  commentId: T:EquipmentMonitoring.Core.Models.Equipment
+  parent: EquipmentMonitoring.Core.Models
+  href: EquipmentMonitoring.Core.Models.Equipment.html
+  name: Equipment
+  nameWithType: Equipment
+  fullName: EquipmentMonitoring.Core.Models.Equipment
+- uid: EquipmentMonitoring.Core.Models.Fault
+  commentId: T:EquipmentMonitoring.Core.Models.Fault
+  href: EquipmentMonitoring.Core.Models.Fault.html
+  name: Fault
+  nameWithType: Fault
+  fullName: EquipmentMonitoring.Core.Models.Fault
+- uid: EquipmentMonitoring.Core.Models.Parameter
+  commentId: T:EquipmentMonitoring.Core.Models.Parameter
+  href: EquipmentMonitoring.Core.Models.Parameter.html
+  name: Parameter
+  nameWithType: Parameter
+  fullName: EquipmentMonitoring.Core.Models.Parameter
+- uid: EquipmentMonitoring.Core.Models.User
+  commentId: T:EquipmentMonitoring.Core.Models.User
+  href: EquipmentMonitoring.Core.Models.User.html
+  name: User
+  nameWithType: User
+  fullName: EquipmentMonitoring.Core.Models.User
+- uid: EquipmentMonitoring.Core.Models
+  commentId: N:EquipmentMonitoring.Core.Models
+  href: EquipmentMonitoring.html
+  name: EquipmentMonitoring.Core.Models
+  nameWithType: EquipmentMonitoring.Core.Models
+  fullName: EquipmentMonitoring.Core.Models
+  spec.csharp:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Models
+    name: Models
+    href: EquipmentMonitoring.Core.Models.html
+  spec.vb:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Models
+    name: Models
+    href: EquipmentMonitoring.Core.Models.html

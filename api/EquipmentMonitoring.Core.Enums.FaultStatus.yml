@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: EquipmentMonitoring.Core.Enums.FaultStatus
+  commentId: T:EquipmentMonitoring.Core.Enums.FaultStatus
+  id: FaultStatus
+  parent: EquipmentMonitoring.Core.Enums
+  children:
+  - EquipmentMonitoring.Core.Enums.FaultStatus.Acknowledged
+  - EquipmentMonitoring.Core.Enums.FaultStatus.Active
+  - EquipmentMonitoring.Core.Enums.FaultStatus.Closed
+  - EquipmentMonitoring.Core.Enums.FaultStatus.Escalated
+  langs:
+  - csharp
+  - vb
+  name: FaultStatus
+  nameWithType: FaultStatus
+  fullName: EquipmentMonitoring.Core.Enums.FaultStatus
+  type: Enum
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/FaultStatus.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: FaultStatus
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/FaultStatus.cs
+    startLine: 3
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Enums
+  summary: Жизненный цикл отказа
+  example: []
+  syntax:
+    content: public enum FaultStatus
+    content.vb: Public Enum FaultStatus
+- uid: EquipmentMonitoring.Core.Enums.FaultStatus.Active
+  commentId: F:EquipmentMonitoring.Core.Enums.FaultStatus.Active
+  id: Active
+  parent: EquipmentMonitoring.Core.Enums.FaultStatus
+  langs:
+  - csharp
+  - vb
+  name: Active
+  nameWithType: FaultStatus.Active
+  fullName: EquipmentMonitoring.Core.Enums.FaultStatus.Active
+  type: Field
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/FaultStatus.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Active
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/FaultStatus.cs
+    startLine: 3
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Enums
+  syntax:
+    content: Active = 0
+    return:
+      type: EquipmentMonitoring.Core.Enums.FaultStatus
+- uid: EquipmentMonitoring.Core.Enums.FaultStatus.Acknowledged
+  commentId: F:EquipmentMonitoring.Core.Enums.FaultStatus.Acknowledged
+  id: Acknowledged
+  parent: EquipmentMonitoring.Core.Enums.FaultStatus
+  langs:
+  - csharp
+  - vb
+  name: Acknowledged
+  nameWithType: FaultStatus.Acknowledged
+  fullName: EquipmentMonitoring.Core.Enums.FaultStatus.Acknowledged
+  type: Field
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/FaultStatus.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Acknowledged
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/FaultStatus.cs
+    startLine: 3
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Enums
+  syntax:
+    content: Acknowledged = 1
+    return:
+      type: EquipmentMonitoring.Core.Enums.FaultStatus
+- uid: EquipmentMonitoring.Core.Enums.FaultStatus.Escalated
+  commentId: F:EquipmentMonitoring.Core.Enums.FaultStatus.Escalated
+  id: Escalated
+  parent: EquipmentMonitoring.Core.Enums.FaultStatus
+  langs:
+  - csharp
+  - vb
+  name: Escalated
+  nameWithType: FaultStatus.Escalated
+  fullName: EquipmentMonitoring.Core.Enums.FaultStatus.Escalated
+  type: Field
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/FaultStatus.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Escalated
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/FaultStatus.cs
+    startLine: 3
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Enums
+  syntax:
+    content: Escalated = 2
+    return:
+      type: EquipmentMonitoring.Core.Enums.FaultStatus
+- uid: EquipmentMonitoring.Core.Enums.FaultStatus.Closed
+  commentId: F:EquipmentMonitoring.Core.Enums.FaultStatus.Closed
+  id: Closed
+  parent: EquipmentMonitoring.Core.Enums.FaultStatus
+  langs:
+  - csharp
+  - vb
+  name: Closed
+  nameWithType: FaultStatus.Closed
+  fullName: EquipmentMonitoring.Core.Enums.FaultStatus.Closed
+  type: Field
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/FaultStatus.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Closed
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/FaultStatus.cs
+    startLine: 3
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Enums
+  syntax:
+    content: Closed = 3
+    return:
+      type: EquipmentMonitoring.Core.Enums.FaultStatus
+references:
+- uid: EquipmentMonitoring.Core.Enums
+  commentId: N:EquipmentMonitoring.Core.Enums
+  href: EquipmentMonitoring.html
+  name: EquipmentMonitoring.Core.Enums
+  nameWithType: EquipmentMonitoring.Core.Enums
+  fullName: EquipmentMonitoring.Core.Enums
+  spec.csharp:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Enums
+    name: Enums
+    href: EquipmentMonitoring.Core.Enums.html
+  spec.vb:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Enums
+    name: Enums
+    href: EquipmentMonitoring.Core.Enums.html
+- uid: EquipmentMonitoring.Core.Enums.FaultStatus
+  commentId: T:EquipmentMonitoring.Core.Enums.FaultStatus
+  parent: EquipmentMonitoring.Core.Enums
+  href: EquipmentMonitoring.Core.Enums.FaultStatus.html
+  name: FaultStatus
+  nameWithType: FaultStatus
+  fullName: EquipmentMonitoring.Core.Enums.FaultStatus

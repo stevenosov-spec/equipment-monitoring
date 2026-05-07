@@ -1,0 +1,70 @@
+### YamlMime:ManagedReference
+items:
+- uid: EquipmentMonitoring.Core.Enums
+  commentId: N:EquipmentMonitoring.Core.Enums
+  id: EquipmentMonitoring.Core.Enums
+  children:
+  - EquipmentMonitoring.Core.Enums.EquipmentState
+  - EquipmentMonitoring.Core.Enums.FaultPriority
+  - EquipmentMonitoring.Core.Enums.FaultStatus
+  langs:
+  - csharp
+  - vb
+  name: EquipmentMonitoring.Core.Enums
+  nameWithType: EquipmentMonitoring.Core.Enums
+  fullName: EquipmentMonitoring.Core.Enums
+  type: Namespace
+  assemblies:
+  - EquipmentMonitoring.Core
+references:
+- uid: EquipmentMonitoring.Core.Enums.EquipmentState
+  commentId: T:EquipmentMonitoring.Core.Enums.EquipmentState
+  parent: EquipmentMonitoring.Core.Enums
+  href: EquipmentMonitoring.Core.Enums.EquipmentState.html
+  name: EquipmentState
+  nameWithType: EquipmentState
+  fullName: EquipmentMonitoring.Core.Enums.EquipmentState
+- uid: EquipmentMonitoring.Core.Enums.FaultPriority
+  commentId: T:EquipmentMonitoring.Core.Enums.FaultPriority
+  parent: EquipmentMonitoring.Core.Enums
+  href: EquipmentMonitoring.Core.Enums.FaultPriority.html
+  name: FaultPriority
+  nameWithType: FaultPriority
+  fullName: EquipmentMonitoring.Core.Enums.FaultPriority
+- uid: EquipmentMonitoring.Core.Enums.FaultStatus
+  commentId: T:EquipmentMonitoring.Core.Enums.FaultStatus
+  parent: EquipmentMonitoring.Core.Enums
+  href: EquipmentMonitoring.Core.Enums.FaultStatus.html
+  name: FaultStatus
+  nameWithType: FaultStatus
+  fullName: EquipmentMonitoring.Core.Enums.FaultStatus
+- uid: EquipmentMonitoring.Core.Enums
+  commentId: N:EquipmentMonitoring.Core.Enums
+  href: EquipmentMonitoring.html
+  name: EquipmentMonitoring.Core.Enums
+  nameWithType: EquipmentMonitoring.Core.Enums
+  fullName: EquipmentMonitoring.Core.Enums
+  spec.csharp:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Enums
+    name: Enums
+    href: EquipmentMonitoring.Core.Enums.html
+  spec.vb:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Enums
+    name: Enums
+    href: EquipmentMonitoring.Core.Enums.html

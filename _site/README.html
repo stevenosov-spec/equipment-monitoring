@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Equipment Monitoring System </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Equipment Monitoring System ">
+    
+    
+      <link rel="shortcut icon" href="favicon.ico">
+      <link rel="stylesheet" href="styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="styles/docfx.css">
+      <link rel="stylesheet" href="styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="equipment-monitoring-system">Equipment Monitoring System</h1>
+
+<p>Прототип десктопного приложения для <strong>непрерывного мониторинга технологического оборудования</strong>, разработанный в рамках лабораторных работ по дисциплине «Программная инженерия».</p>
+<p>Приложение имитирует поступление данных с промышленных датчиков, отображает состояние оборудования в реальном времени, регистрирует отказы, рассчитывает общую эффективность оборудования (OEE) и формирует отчётность в формате Excel.</p>
+<hr>
+<h2 id="-основные-возможности">🔧 Основные возможности</h2>
+<ul>
+<li><p><strong>Симуляция технологических параметров</strong><br>
+Плавное изменение значений (температура, давление, вибрация, расход) с возвратом к среднему — имитирует реальный технологический процесс.</p>
+</li>
+<li><p><strong>Цветовая индикация состояния</strong><br>
+Каждая единица оборудования отображается в виде плитки с цветом: зелёный — норма, жёлтый — предупреждение, красный — авария, серый — нет данных.</p>
+</li>
+<li><p><strong>Регистрация и обработка отказов</strong><br>
+Автоматическое выявление выхода параметров за допустимые границы, расчёт приоритета отказа, подтверждение оператором с автоматическим удалением из списка через 3 секунды и переводом оборудования в нормальное состояние.</p>
+</li>
+<li><p><strong>Таблица параметров в реальном времени</strong><br>
+Для выбранного оборудования отображаются текущие значения всех параметров, единицы измерения и время последнего обновления (обновляется каждую секунду).</p>
+</li>
+<li><p><strong>Тренды изменения параметров</strong><br>
+Отображение графика изменения выбранного параметра за любой период с настраиваемым масштабом (последний час, сутки, неделя, месяц, произвольный). На график наносятся верхняя и нижняя границы допуска (красные пунктирные линии).</p>
+</li>
+<li><p><strong>Расчёт OEE</strong><br>
+Для выбранного оборудования в реальном времени рассчитываются и отображаются показатели: доступность, производительность, качество, общий OEE.</p>
+</li>
+<li><p><strong>Сводный отчёт по OEE</strong><br>
+Генерация Excel-файла с расчётом OEE для всех единиц оборудования за произвольный интервал времени (от 1 секунды до нескольких лет). Перед формированием отчёта запрашивается период через удобное диалоговое окно.</p>
+</li>
+<li><p><strong>Excel-отчёт по отказам</strong><br>
+Выгрузка списка всех отказов за последнюю неделю в формате Microsoft Excel.</p>
+</li>
+<li><p><strong>Мультиязычность (заглушка)</strong><br>
+Базовая поддержка переключения русского/английского интерфейса (переменная <code>_currentLanguage</code>).</p>
+</li>
+<li><p><strong>Удобный интерфейс</strong><br>
+Главное окно разделено на три зоны: левая панель управления со списком установок и кнопками, центральная область с индикаторами, OEE и таблицей параметров, правая панель со списком активных отказов.</p>
+</li>
+</ul>
+<hr>
+<h2 id="-архитектура-и-технологии">🧱 Архитектура и технологии</h2>
+<p>Приложение построено в соответствии с трёхслойной архитектурой:</p>
+<table>
+<thead>
+<tr>
+<th>Слой</th>
+<th>Проект</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Уровень представления</strong></td>
+<td><code>EquipmentMonitoring.App</code></td>
+<td>WPF-интерфейс (MVVM)</td>
+</tr>
+<tr>
+<td><strong>Бизнес-логика</strong></td>
+<td><code>EquipmentMonitoring.Core</code></td>
+<td>Сервисы мониторинга, отказов, отчётов, OEE, моделей</td>
+</tr>
+<tr>
+<td><strong>Интеграция</strong></td>
+<td><code>EquipmentMonitoring.Integration</code></td>
+<td>Симулятор датчиков (может быть заменён на реальные OPC UA/Modbus)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Стек технологий:</strong></p>
+<ul>
+<li><strong>.NET 8 (Windows)</strong> — целевая платформа</li>
+<li><strong>WPF + MVVM CommunityToolkit</strong> — пользовательский интерфейс</li>
+<li><strong>Entity Framework Core 8 + MySQL</strong> — ORM и база данных</li>
+<li><strong>OxyPlot</strong> — визуализация графиков (тренды)</li>
+<li><strong>ClosedXML</strong> — генерация Excel-файлов</li>
+<li><strong>Microsoft.Extensions.DependencyInjection</strong> — внедрение зависимостей</li>
+<li><strong>Git</strong> — система контроля версий</li>
+</ul>
+<hr>
+<h2 id="-структура-проекта">📁 Структура проекта</h2>
+<p>equipment-monitoring/
+├── src/
+│ ├── EquipmentMonitoring.Core/ # Модели, DbContext, сервисы
+│ │ ├── Enums/
+│ │ ├── Models/
+│ │ ├── Data/
+│ │ └── Services/
+│ ├── EquipmentMonitoring.Integration/ # Источники данных (симулятор, драйверы)
+│ │ └── Simulation/
+│ └── EquipmentMonitoring.App/ # WPF‑приложение
+│ ├── Converters/
+│ ├── ViewModels/
+│ └── Views/
+├── .gitignore
+└── README.md</p>
+<h2 id="-запуск-проекта">🚀 Запуск проекта</h2>
+<h3 id="требования-к-окружению">Требования к окружению</h3>
+<ul>
+<li><strong>Windows 10/11</strong></li>
+<li><strong>.NET 8 SDK</strong> (установите с <a href="https://dotnet.microsoft.com/">https://dotnet.microsoft.com/</a>)</li>
+<li><strong>MySQL Server 8.0</strong> (локально или удалённо)</li>
+<li><strong>MySQL Workbench</strong> (опционально, для работы с БД)</li>
+<li><strong>Visual Studio 2022</strong> (Community Edition) или <strong>Visual Studio Code</strong> с Extensions</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/stevenosov-spec/equipment-monitoring/blob/main/README.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

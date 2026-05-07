@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: EquipmentMonitoring.Core.Enums.FaultPriority
+  commentId: T:EquipmentMonitoring.Core.Enums.FaultPriority
+  id: FaultPriority
+  parent: EquipmentMonitoring.Core.Enums
+  children:
+  - EquipmentMonitoring.Core.Enums.FaultPriority.Critical
+  - EquipmentMonitoring.Core.Enums.FaultPriority.High
+  - EquipmentMonitoring.Core.Enums.FaultPriority.Low
+  - EquipmentMonitoring.Core.Enums.FaultPriority.Medium
+  langs:
+  - csharp
+  - vb
+  name: FaultPriority
+  nameWithType: FaultPriority
+  fullName: EquipmentMonitoring.Core.Enums.FaultPriority
+  type: Enum
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/FaultPriority.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: FaultPriority
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/FaultPriority.cs
+    startLine: 3
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Enums
+  summary: Важность отказа
+  example: []
+  syntax:
+    content: public enum FaultPriority
+    content.vb: Public Enum FaultPriority
+- uid: EquipmentMonitoring.Core.Enums.FaultPriority.Low
+  commentId: F:EquipmentMonitoring.Core.Enums.FaultPriority.Low
+  id: Low
+  parent: EquipmentMonitoring.Core.Enums.FaultPriority
+  langs:
+  - csharp
+  - vb
+  name: Low
+  nameWithType: FaultPriority.Low
+  fullName: EquipmentMonitoring.Core.Enums.FaultPriority.Low
+  type: Field
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/FaultPriority.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Low
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/FaultPriority.cs
+    startLine: 3
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Enums
+  syntax:
+    content: Low = 0
+    return:
+      type: EquipmentMonitoring.Core.Enums.FaultPriority
+- uid: EquipmentMonitoring.Core.Enums.FaultPriority.Medium
+  commentId: F:EquipmentMonitoring.Core.Enums.FaultPriority.Medium
+  id: Medium
+  parent: EquipmentMonitoring.Core.Enums.FaultPriority
+  langs:
+  - csharp
+  - vb
+  name: Medium
+  nameWithType: FaultPriority.Medium
+  fullName: EquipmentMonitoring.Core.Enums.FaultPriority.Medium
+  type: Field
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/FaultPriority.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Medium
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/FaultPriority.cs
+    startLine: 3
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Enums
+  syntax:
+    content: Medium = 1
+    return:
+      type: EquipmentMonitoring.Core.Enums.FaultPriority
+- uid: EquipmentMonitoring.Core.Enums.FaultPriority.High
+  commentId: F:EquipmentMonitoring.Core.Enums.FaultPriority.High
+  id: High
+  parent: EquipmentMonitoring.Core.Enums.FaultPriority
+  langs:
+  - csharp
+  - vb
+  name: High
+  nameWithType: FaultPriority.High
+  fullName: EquipmentMonitoring.Core.Enums.FaultPriority.High
+  type: Field
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/FaultPriority.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: High
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/FaultPriority.cs
+    startLine: 3
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Enums
+  syntax:
+    content: High = 2
+    return:
+      type: EquipmentMonitoring.Core.Enums.FaultPriority
+- uid: EquipmentMonitoring.Core.Enums.FaultPriority.Critical
+  commentId: F:EquipmentMonitoring.Core.Enums.FaultPriority.Critical
+  id: Critical
+  parent: EquipmentMonitoring.Core.Enums.FaultPriority
+  langs:
+  - csharp
+  - vb
+  name: Critical
+  nameWithType: FaultPriority.Critical
+  fullName: EquipmentMonitoring.Core.Enums.FaultPriority.Critical
+  type: Field
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/FaultPriority.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Critical
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Enums/FaultPriority.cs
+    startLine: 3
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Enums
+  syntax:
+    content: Critical = 3
+    return:
+      type: EquipmentMonitoring.Core.Enums.FaultPriority
+references:
+- uid: EquipmentMonitoring.Core.Enums
+  commentId: N:EquipmentMonitoring.Core.Enums
+  href: EquipmentMonitoring.html
+  name: EquipmentMonitoring.Core.Enums
+  nameWithType: EquipmentMonitoring.Core.Enums
+  fullName: EquipmentMonitoring.Core.Enums
+  spec.csharp:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Enums
+    name: Enums
+    href: EquipmentMonitoring.Core.Enums.html
+  spec.vb:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Enums
+    name: Enums
+    href: EquipmentMonitoring.Core.Enums.html
+- uid: EquipmentMonitoring.Core.Enums.FaultPriority
+  commentId: T:EquipmentMonitoring.Core.Enums.FaultPriority
+  parent: EquipmentMonitoring.Core.Enums
+  href: EquipmentMonitoring.Core.Enums.FaultPriority.html
+  name: FaultPriority
+  nameWithType: FaultPriority
+  fullName: EquipmentMonitoring.Core.Enums.FaultPriority

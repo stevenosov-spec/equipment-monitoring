@@ -1,0 +1,28 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "src/EquipmentMonitoring/EquipmentMonitoring.Core/EquipmentMonitoring.Core.csproj",
+            "src/EquipmentMonitoring/EquipmentMonitoring.Integration/EquipmentMonitoring.Integration.csproj"
+          ],
+          "exclude": [ "**/bin/**", "**/obj/**", "**/Migrations/**" ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      { "files": [ "api/*.yml", "api/*.md" ] },
+      { "files": [ "docs/functions.md" ] },
+      { "files": [ "README.md" ] }
+    ],
+    "resource": [
+      { "files": [ "docs/images/**" ] }
+    ],
+    "dest": "_site",
+    "template": [ "default" ]
+  }
+}

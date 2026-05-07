@@ -1,0 +1,897 @@
+### YamlMime:ManagedReference
+items:
+- uid: EquipmentMonitoring.Core.Services.EquipmentMonitorService
+  commentId: T:EquipmentMonitoring.Core.Services.EquipmentMonitorService
+  id: EquipmentMonitorService
+  parent: EquipmentMonitoring.Core.Services
+  children:
+  - EquipmentMonitoring.Core.Services.EquipmentMonitorService.#ctor(EquipmentMonitoring.Core.Services.Interfaces.ITagReader,Microsoft.EntityFrameworkCore.IDbContextFactory{EquipmentMonitoring.Core.Data.AppDbContext})
+  - EquipmentMonitoring.Core.Services.EquipmentMonitorService.Dispose
+  - EquipmentMonitoring.Core.Services.EquipmentMonitorService.OnFaultDetected
+  - EquipmentMonitoring.Core.Services.EquipmentMonitorService.OnStateChanged
+  - EquipmentMonitoring.Core.Services.EquipmentMonitorService.Start
+  - EquipmentMonitoring.Core.Services.EquipmentMonitorService.Stop
+  langs:
+  - csharp
+  - vb
+  name: EquipmentMonitorService
+  nameWithType: EquipmentMonitorService
+  fullName: EquipmentMonitoring.Core.Services.EquipmentMonitorService
+  type: Class
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/EquipmentMonitorService.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: EquipmentMonitorService
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/EquipmentMonitorService.cs
+    startLine: 15
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services
+  summary: >-
+    Центральный сервис мониторинга оборудования.
+
+    Получает данные от <xref href="EquipmentMonitoring.Core.Services.Interfaces.ITagReader" data-throw-if-not-resolved="false"></xref>, обновляет параметры в БД,
+
+    обнаруживает выход за границы допуска и создаёт отказы.
+  example: []
+  syntax:
+    content: 'public class EquipmentMonitorService : IEquipmentMonitor, IDisposable'
+    content.vb: Public Class EquipmentMonitorService Implements IEquipmentMonitor, IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: EquipmentMonitoring.Core.Services.EquipmentMonitorService.OnFaultDetected
+  commentId: E:EquipmentMonitoring.Core.Services.EquipmentMonitorService.OnFaultDetected
+  id: OnFaultDetected
+  parent: EquipmentMonitoring.Core.Services.EquipmentMonitorService
+  langs:
+  - csharp
+  - vb
+  name: OnFaultDetected
+  nameWithType: EquipmentMonitorService.OnFaultDetected
+  fullName: EquipmentMonitoring.Core.Services.EquipmentMonitorService.OnFaultDetected
+  type: Event
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/EquipmentMonitorService.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: OnFaultDetected
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/EquipmentMonitorService.cs
+    startLine: 21
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services
+  example: []
+  syntax:
+    content: public event Action<Fault>? OnFaultDetected
+    return:
+      type: System.Action{EquipmentMonitoring.Core.Models.Fault}
+    content.vb: Public Event OnFaultDetected As Action(Of Fault)
+  implements:
+  - EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.OnFaultDetected
+- uid: EquipmentMonitoring.Core.Services.EquipmentMonitorService.OnStateChanged
+  commentId: E:EquipmentMonitoring.Core.Services.EquipmentMonitorService.OnStateChanged
+  id: OnStateChanged
+  parent: EquipmentMonitoring.Core.Services.EquipmentMonitorService
+  langs:
+  - csharp
+  - vb
+  name: OnStateChanged
+  nameWithType: EquipmentMonitorService.OnStateChanged
+  fullName: EquipmentMonitoring.Core.Services.EquipmentMonitorService.OnStateChanged
+  type: Event
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/EquipmentMonitorService.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: OnStateChanged
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/EquipmentMonitorService.cs
+    startLine: 24
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services
+  example: []
+  syntax:
+    content: public event Action<int, EquipmentState>? OnStateChanged
+    return:
+      type: System.Action{System.Int32,EquipmentMonitoring.Core.Enums.EquipmentState}
+    content.vb: Public Event OnStateChanged As Action(Of Integer, EquipmentState)
+  implements:
+  - EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.OnStateChanged
+- uid: EquipmentMonitoring.Core.Services.EquipmentMonitorService.#ctor(EquipmentMonitoring.Core.Services.Interfaces.ITagReader,Microsoft.EntityFrameworkCore.IDbContextFactory{EquipmentMonitoring.Core.Data.AppDbContext})
+  commentId: M:EquipmentMonitoring.Core.Services.EquipmentMonitorService.#ctor(EquipmentMonitoring.Core.Services.Interfaces.ITagReader,Microsoft.EntityFrameworkCore.IDbContextFactory{EquipmentMonitoring.Core.Data.AppDbContext})
+  id: '#ctor(EquipmentMonitoring.Core.Services.Interfaces.ITagReader,Microsoft.EntityFrameworkCore.IDbContextFactory{EquipmentMonitoring.Core.Data.AppDbContext})'
+  parent: EquipmentMonitoring.Core.Services.EquipmentMonitorService
+  langs:
+  - csharp
+  - vb
+  name: EquipmentMonitorService(ITagReader, IDbContextFactory<AppDbContext>)
+  nameWithType: EquipmentMonitorService.EquipmentMonitorService(ITagReader, IDbContextFactory<AppDbContext>)
+  fullName: EquipmentMonitoring.Core.Services.EquipmentMonitorService.EquipmentMonitorService(EquipmentMonitoring.Core.Services.Interfaces.ITagReader, Microsoft.EntityFrameworkCore.IDbContextFactory<EquipmentMonitoring.Core.Data.AppDbContext>)
+  type: Constructor
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/EquipmentMonitorService.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: .ctor
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/EquipmentMonitorService.cs
+    startLine: 31
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services
+  summary: Инициализирует сервис мониторинга.
+  example: []
+  syntax:
+    content: public EquipmentMonitorService(ITagReader tagReader, IDbContextFactory<AppDbContext> contextFactory)
+    parameters:
+    - id: tagReader
+      type: EquipmentMonitoring.Core.Services.Interfaces.ITagReader
+      description: Источник данных (реальный или симулированный).
+    - id: contextFactory
+      type: Microsoft.EntityFrameworkCore.IDbContextFactory{EquipmentMonitoring.Core.Data.AppDbContext}
+      description: Фабрика контекста БД для потокобезопасного доступа.
+    content.vb: Public Sub New(tagReader As ITagReader, contextFactory As IDbContextFactory(Of AppDbContext))
+  overload: EquipmentMonitoring.Core.Services.EquipmentMonitorService.#ctor*
+  nameWithType.vb: EquipmentMonitorService.New(ITagReader, IDbContextFactory(Of AppDbContext))
+  fullName.vb: EquipmentMonitoring.Core.Services.EquipmentMonitorService.New(EquipmentMonitoring.Core.Services.Interfaces.ITagReader, Microsoft.EntityFrameworkCore.IDbContextFactory(Of EquipmentMonitoring.Core.Data.AppDbContext))
+  name.vb: New(ITagReader, IDbContextFactory(Of AppDbContext))
+- uid: EquipmentMonitoring.Core.Services.EquipmentMonitorService.Start
+  commentId: M:EquipmentMonitoring.Core.Services.EquipmentMonitorService.Start
+  id: Start
+  parent: EquipmentMonitoring.Core.Services.EquipmentMonitorService
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: EquipmentMonitorService.Start()
+  fullName: EquipmentMonitoring.Core.Services.EquipmentMonitorService.Start()
+  type: Method
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/EquipmentMonitorService.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Start
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/EquipmentMonitorService.cs
+    startLine: 39
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services
+  example: []
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start()
+  overload: EquipmentMonitoring.Core.Services.EquipmentMonitorService.Start*
+  implements:
+  - EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Start
+- uid: EquipmentMonitoring.Core.Services.EquipmentMonitorService.Stop
+  commentId: M:EquipmentMonitoring.Core.Services.EquipmentMonitorService.Stop
+  id: Stop
+  parent: EquipmentMonitoring.Core.Services.EquipmentMonitorService
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: EquipmentMonitorService.Stop()
+  fullName: EquipmentMonitoring.Core.Services.EquipmentMonitorService.Stop()
+  type: Method
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/EquipmentMonitorService.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Stop
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/EquipmentMonitorService.cs
+    startLine: 42
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services
+  example: []
+  syntax:
+    content: public void Stop()
+    content.vb: Public Sub [Stop]()
+  overload: EquipmentMonitoring.Core.Services.EquipmentMonitorService.Stop*
+  implements:
+  - EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Stop
+- uid: EquipmentMonitoring.Core.Services.EquipmentMonitorService.Dispose
+  commentId: M:EquipmentMonitoring.Core.Services.EquipmentMonitorService.Dispose
+  id: Dispose
+  parent: EquipmentMonitoring.Core.Services.EquipmentMonitorService
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: EquipmentMonitorService.Dispose()
+  fullName: EquipmentMonitoring.Core.Services.EquipmentMonitorService.Dispose()
+  type: Method
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/EquipmentMonitorService.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Dispose
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/EquipmentMonitorService.cs
+    startLine: 102
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: EquipmentMonitoring.Core.Services.EquipmentMonitorService.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: EquipmentMonitoring.Core.Services.Interfaces.ITagReader
+  commentId: T:EquipmentMonitoring.Core.Services.Interfaces.ITagReader
+  parent: EquipmentMonitoring.Core.Services.Interfaces
+  href: EquipmentMonitoring.Core.Services.Interfaces.ITagReader.html
+  name: ITagReader
+  nameWithType: ITagReader
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.ITagReader
+- uid: EquipmentMonitoring.Core.Services
+  commentId: N:EquipmentMonitoring.Core.Services
+  href: EquipmentMonitoring.html
+  name: EquipmentMonitoring.Core.Services
+  nameWithType: EquipmentMonitoring.Core.Services
+  fullName: EquipmentMonitoring.Core.Services
+  spec.csharp:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services
+    name: Services
+    href: EquipmentMonitoring.Core.Services.html
+  spec.vb:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services
+    name: Services
+    href: EquipmentMonitoring.Core.Services.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor
+  commentId: T:EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor
+  parent: EquipmentMonitoring.Core.Services.Interfaces
+  href: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.html
+  name: IEquipmentMonitor
+  nameWithType: IEquipmentMonitor
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: EquipmentMonitoring.Core.Services.Interfaces
+  commentId: N:EquipmentMonitoring.Core.Services.Interfaces
+  href: EquipmentMonitoring.html
+  name: EquipmentMonitoring.Core.Services.Interfaces
+  nameWithType: EquipmentMonitoring.Core.Services.Interfaces
+  fullName: EquipmentMonitoring.Core.Services.Interfaces
+  spec.csharp:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services
+    name: Services
+    href: EquipmentMonitoring.Core.Services.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services.Interfaces
+    name: Interfaces
+    href: EquipmentMonitoring.Core.Services.Interfaces.html
+  spec.vb:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services
+    name: Services
+    href: EquipmentMonitoring.Core.Services.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services.Interfaces
+    name: Interfaces
+    href: EquipmentMonitoring.Core.Services.Interfaces.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.OnFaultDetected
+  commentId: E:EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.OnFaultDetected
+  parent: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor
+  href: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.html#EquipmentMonitoring_Core_Services_Interfaces_IEquipmentMonitor_OnFaultDetected
+  name: OnFaultDetected
+  nameWithType: IEquipmentMonitor.OnFaultDetected
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.OnFaultDetected
+- uid: System.Action{EquipmentMonitoring.Core.Models.Fault}
+  commentId: T:System.Action{EquipmentMonitoring.Core.Models.Fault}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<Fault>
+  nameWithType: Action<Fault>
+  fullName: System.Action<EquipmentMonitoring.Core.Models.Fault>
+  nameWithType.vb: Action(Of Fault)
+  fullName.vb: System.Action(Of EquipmentMonitoring.Core.Models.Fault)
+  name.vb: Action(Of Fault)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: EquipmentMonitoring.Core.Models.Fault
+    name: Fault
+    href: EquipmentMonitoring.Core.Models.Fault.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: EquipmentMonitoring.Core.Models.Fault
+    name: Fault
+    href: EquipmentMonitoring.Core.Models.Fault.html
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.OnStateChanged
+  commentId: E:EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.OnStateChanged
+  parent: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor
+  href: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.html#EquipmentMonitoring_Core_Services_Interfaces_IEquipmentMonitor_OnStateChanged
+  name: OnStateChanged
+  nameWithType: IEquipmentMonitor.OnStateChanged
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.OnStateChanged
+- uid: System.Action{System.Int32,EquipmentMonitoring.Core.Enums.EquipmentState}
+  commentId: T:System.Action{System.Int32,EquipmentMonitoring.Core.Enums.EquipmentState}
+  parent: System
+  definition: System.Action`2
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<int, EquipmentState>
+  nameWithType: Action<int, EquipmentState>
+  fullName: System.Action<int, EquipmentMonitoring.Core.Enums.EquipmentState>
+  nameWithType.vb: Action(Of Integer, EquipmentState)
+  fullName.vb: System.Action(Of Integer, EquipmentMonitoring.Core.Enums.EquipmentState)
+  name.vb: Action(Of Integer, EquipmentState)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: EquipmentMonitoring.Core.Enums.EquipmentState
+    name: EquipmentState
+    href: EquipmentMonitoring.Core.Enums.EquipmentState.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: EquipmentMonitoring.Core.Enums.EquipmentState
+    name: EquipmentState
+    href: EquipmentMonitoring.Core.Enums.EquipmentState.html
+  - name: )
+- uid: System.Action`2
+  commentId: T:System.Action`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<T1, T2>
+  nameWithType: Action<T1, T2>
+  fullName: System.Action<T1, T2>
+  nameWithType.vb: Action(Of T1, T2)
+  fullName.vb: System.Action(Of T1, T2)
+  name.vb: Action(Of T1, T2)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: EquipmentMonitoring.Core.Services.EquipmentMonitorService.#ctor*
+  commentId: Overload:EquipmentMonitoring.Core.Services.EquipmentMonitorService.#ctor
+  href: EquipmentMonitoring.Core.Services.EquipmentMonitorService.html#EquipmentMonitoring_Core_Services_EquipmentMonitorService__ctor_EquipmentMonitoring_Core_Services_Interfaces_ITagReader_Microsoft_EntityFrameworkCore_IDbContextFactory_EquipmentMonitoring_Core_Data_AppDbContext__
+  name: EquipmentMonitorService
+  nameWithType: EquipmentMonitorService.EquipmentMonitorService
+  fullName: EquipmentMonitoring.Core.Services.EquipmentMonitorService.EquipmentMonitorService
+  nameWithType.vb: EquipmentMonitorService.New
+  fullName.vb: EquipmentMonitoring.Core.Services.EquipmentMonitorService.New
+  name.vb: New
+- uid: Microsoft.EntityFrameworkCore.IDbContextFactory{EquipmentMonitoring.Core.Data.AppDbContext}
+  commentId: T:Microsoft.EntityFrameworkCore.IDbContextFactory{EquipmentMonitoring.Core.Data.AppDbContext}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.IDbContextFactory`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.idbcontextfactory-1
+  name: IDbContextFactory<AppDbContext>
+  nameWithType: IDbContextFactory<AppDbContext>
+  fullName: Microsoft.EntityFrameworkCore.IDbContextFactory<EquipmentMonitoring.Core.Data.AppDbContext>
+  nameWithType.vb: IDbContextFactory(Of AppDbContext)
+  fullName.vb: Microsoft.EntityFrameworkCore.IDbContextFactory(Of EquipmentMonitoring.Core.Data.AppDbContext)
+  name.vb: IDbContextFactory(Of AppDbContext)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.IDbContextFactory`1
+    name: IDbContextFactory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.idbcontextfactory-1
+  - name: <
+  - uid: EquipmentMonitoring.Core.Data.AppDbContext
+    name: AppDbContext
+    href: EquipmentMonitoring.Core.Data.AppDbContext.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.IDbContextFactory`1
+    name: IDbContextFactory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.idbcontextfactory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: EquipmentMonitoring.Core.Data.AppDbContext
+    name: AppDbContext
+    href: EquipmentMonitoring.Core.Data.AppDbContext.html
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.IDbContextFactory`1
+  commentId: T:Microsoft.EntityFrameworkCore.IDbContextFactory`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.idbcontextfactory-1
+  name: IDbContextFactory<TContext>
+  nameWithType: IDbContextFactory<TContext>
+  fullName: Microsoft.EntityFrameworkCore.IDbContextFactory<TContext>
+  nameWithType.vb: IDbContextFactory(Of TContext)
+  fullName.vb: Microsoft.EntityFrameworkCore.IDbContextFactory(Of TContext)
+  name.vb: IDbContextFactory(Of TContext)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.IDbContextFactory`1
+    name: IDbContextFactory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.idbcontextfactory-1
+  - name: <
+  - name: TContext
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.IDbContextFactory`1
+    name: IDbContextFactory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.idbcontextfactory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContext
+  - name: )
+- uid: Microsoft.EntityFrameworkCore
+  commentId: N:Microsoft.EntityFrameworkCore
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.EntityFrameworkCore
+  nameWithType: Microsoft.EntityFrameworkCore
+  fullName: Microsoft.EntityFrameworkCore
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore
+    name: EntityFrameworkCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore
+    name: EntityFrameworkCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore
+- uid: EquipmentMonitoring.Core.Services.EquipmentMonitorService.Start*
+  commentId: Overload:EquipmentMonitoring.Core.Services.EquipmentMonitorService.Start
+  href: EquipmentMonitoring.Core.Services.EquipmentMonitorService.html#EquipmentMonitoring_Core_Services_EquipmentMonitorService_Start
+  name: Start
+  nameWithType: EquipmentMonitorService.Start
+  fullName: EquipmentMonitoring.Core.Services.EquipmentMonitorService.Start
+- uid: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Start
+  commentId: M:EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Start
+  parent: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor
+  href: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.html#EquipmentMonitoring_Core_Services_Interfaces_IEquipmentMonitor_Start
+  name: Start()
+  nameWithType: IEquipmentMonitor.Start()
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Start()
+  spec.csharp:
+  - uid: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Start
+    name: Start
+    href: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.html#EquipmentMonitoring_Core_Services_Interfaces_IEquipmentMonitor_Start
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Start
+    name: Start
+    href: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.html#EquipmentMonitoring_Core_Services_Interfaces_IEquipmentMonitor_Start
+  - name: (
+  - name: )
+- uid: EquipmentMonitoring.Core.Services.EquipmentMonitorService.Stop*
+  commentId: Overload:EquipmentMonitoring.Core.Services.EquipmentMonitorService.Stop
+  href: EquipmentMonitoring.Core.Services.EquipmentMonitorService.html#EquipmentMonitoring_Core_Services_EquipmentMonitorService_Stop
+  name: Stop
+  nameWithType: EquipmentMonitorService.Stop
+  fullName: EquipmentMonitoring.Core.Services.EquipmentMonitorService.Stop
+- uid: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Stop
+  commentId: M:EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Stop
+  parent: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor
+  href: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.html#EquipmentMonitoring_Core_Services_Interfaces_IEquipmentMonitor_Stop
+  name: Stop()
+  nameWithType: IEquipmentMonitor.Stop()
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Stop()
+  spec.csharp:
+  - uid: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Stop
+    name: Stop
+    href: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.html#EquipmentMonitoring_Core_Services_Interfaces_IEquipmentMonitor_Stop
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.Stop
+    name: Stop
+    href: EquipmentMonitoring.Core.Services.Interfaces.IEquipmentMonitor.html#EquipmentMonitoring_Core_Services_Interfaces_IEquipmentMonitor_Stop
+  - name: (
+  - name: )
+- uid: EquipmentMonitoring.Core.Services.EquipmentMonitorService.Dispose*
+  commentId: Overload:EquipmentMonitoring.Core.Services.EquipmentMonitorService.Dispose
+  href: EquipmentMonitoring.Core.Services.EquipmentMonitorService.html#EquipmentMonitoring_Core_Services_EquipmentMonitorService_Dispose
+  name: Dispose
+  nameWithType: EquipmentMonitorService.Dispose
+  fullName: EquipmentMonitoring.Core.Services.EquipmentMonitorService.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

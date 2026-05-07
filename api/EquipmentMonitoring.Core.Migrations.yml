@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: EquipmentMonitoring.Core.Migrations
+  commentId: N:EquipmentMonitoring.Core.Migrations
+  id: EquipmentMonitoring.Core.Migrations
+  children:
+  - EquipmentMonitoring.Core.Migrations.AddNominalValueToParameter
+  - EquipmentMonitoring.Core.Migrations.InitialCreate
+  langs:
+  - csharp
+  - vb
+  name: EquipmentMonitoring.Core.Migrations
+  nameWithType: EquipmentMonitoring.Core.Migrations
+  fullName: EquipmentMonitoring.Core.Migrations
+  type: Namespace
+  assemblies:
+  - EquipmentMonitoring.Core
+references:
+- uid: EquipmentMonitoring.Core.Migrations.InitialCreate
+  commentId: T:EquipmentMonitoring.Core.Migrations.InitialCreate
+  href: EquipmentMonitoring.Core.Migrations.InitialCreate.html
+  name: InitialCreate
+  nameWithType: InitialCreate
+  fullName: EquipmentMonitoring.Core.Migrations.InitialCreate
+- uid: EquipmentMonitoring.Core.Migrations.AddNominalValueToParameter
+  commentId: T:EquipmentMonitoring.Core.Migrations.AddNominalValueToParameter
+  href: EquipmentMonitoring.Core.Migrations.AddNominalValueToParameter.html
+  name: AddNominalValueToParameter
+  nameWithType: AddNominalValueToParameter
+  fullName: EquipmentMonitoring.Core.Migrations.AddNominalValueToParameter

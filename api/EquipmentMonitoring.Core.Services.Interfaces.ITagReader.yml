@@ -1,0 +1,233 @@
+### YamlMime:ManagedReference
+items:
+- uid: EquipmentMonitoring.Core.Services.Interfaces.ITagReader
+  commentId: T:EquipmentMonitoring.Core.Services.Interfaces.ITagReader
+  id: ITagReader
+  parent: EquipmentMonitoring.Core.Services.Interfaces
+  children:
+  - EquipmentMonitoring.Core.Services.Interfaces.ITagReader.Start
+  - EquipmentMonitoring.Core.Services.Interfaces.ITagReader.Stop
+  - EquipmentMonitoring.Core.Services.Interfaces.ITagReader.TagValueChanged
+  langs:
+  - csharp
+  - vb
+  name: ITagReader
+  nameWithType: ITagReader
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.ITagReader
+  type: Interface
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/ITagReader.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: ITagReader
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/ITagReader.cs
+    startLine: 5
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services.Interfaces
+  summary: Источник данных (реальный или симулированный)
+  example: []
+  syntax:
+    content: public interface ITagReader
+    content.vb: Public Interface ITagReader
+  derivedClasses:
+  - EquipmentMonitoring.Integration.Simulation.SimulatedTagReader
+- uid: EquipmentMonitoring.Core.Services.Interfaces.ITagReader.TagValueChanged
+  commentId: E:EquipmentMonitoring.Core.Services.Interfaces.ITagReader.TagValueChanged
+  id: TagValueChanged
+  parent: EquipmentMonitoring.Core.Services.Interfaces.ITagReader
+  langs:
+  - csharp
+  - vb
+  name: TagValueChanged
+  nameWithType: ITagReader.TagValueChanged
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.ITagReader.TagValueChanged
+  type: Event
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/ITagReader.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: TagValueChanged
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/ITagReader.cs
+    startLine: 7
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services.Interfaces
+  syntax:
+    content: event EventHandler<TagValueChangedEventArgs> TagValueChanged
+    return:
+      type: System.EventHandler{EquipmentMonitoring.Core.Services.Interfaces.TagValueChangedEventArgs}
+    content.vb: Event TagValueChanged As EventHandler(Of TagValueChangedEventArgs)
+- uid: EquipmentMonitoring.Core.Services.Interfaces.ITagReader.Start
+  commentId: M:EquipmentMonitoring.Core.Services.Interfaces.ITagReader.Start
+  id: Start
+  parent: EquipmentMonitoring.Core.Services.Interfaces.ITagReader
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: ITagReader.Start()
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.ITagReader.Start()
+  type: Method
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/ITagReader.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Start
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/ITagReader.cs
+    startLine: 8
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services.Interfaces
+  syntax:
+    content: void Start()
+    content.vb: Sub Start()
+  overload: EquipmentMonitoring.Core.Services.Interfaces.ITagReader.Start*
+- uid: EquipmentMonitoring.Core.Services.Interfaces.ITagReader.Stop
+  commentId: M:EquipmentMonitoring.Core.Services.Interfaces.ITagReader.Stop
+  id: Stop
+  parent: EquipmentMonitoring.Core.Services.Interfaces.ITagReader
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: ITagReader.Stop()
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.ITagReader.Stop()
+  type: Method
+  source:
+    remote:
+      path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/ITagReader.cs
+      branch: main
+      repo: https://github.com/stevenosov-spec/equipment-monitoring.git
+    id: Stop
+    path: src/EquipmentMonitoring/EquipmentMonitoring.Core/Services/Interfaces/ITagReader.cs
+    startLine: 9
+  assemblies:
+  - EquipmentMonitoring.Core
+  namespace: EquipmentMonitoring.Core.Services.Interfaces
+  syntax:
+    content: void Stop()
+    content.vb: Sub [Stop]()
+  overload: EquipmentMonitoring.Core.Services.Interfaces.ITagReader.Stop*
+references:
+- uid: EquipmentMonitoring.Core.Services.Interfaces
+  commentId: N:EquipmentMonitoring.Core.Services.Interfaces
+  href: EquipmentMonitoring.html
+  name: EquipmentMonitoring.Core.Services.Interfaces
+  nameWithType: EquipmentMonitoring.Core.Services.Interfaces
+  fullName: EquipmentMonitoring.Core.Services.Interfaces
+  spec.csharp:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services
+    name: Services
+    href: EquipmentMonitoring.Core.Services.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services.Interfaces
+    name: Interfaces
+    href: EquipmentMonitoring.Core.Services.Interfaces.html
+  spec.vb:
+  - uid: EquipmentMonitoring
+    name: EquipmentMonitoring
+    href: EquipmentMonitoring.html
+  - name: .
+  - uid: EquipmentMonitoring.Core
+    name: Core
+    href: EquipmentMonitoring.Core.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services
+    name: Services
+    href: EquipmentMonitoring.Core.Services.html
+  - name: .
+  - uid: EquipmentMonitoring.Core.Services.Interfaces
+    name: Interfaces
+    href: EquipmentMonitoring.Core.Services.Interfaces.html
+- uid: System.EventHandler{EquipmentMonitoring.Core.Services.Interfaces.TagValueChangedEventArgs}
+  commentId: T:System.EventHandler{EquipmentMonitoring.Core.Services.Interfaces.TagValueChangedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TagValueChangedEventArgs>
+  nameWithType: EventHandler<TagValueChangedEventArgs>
+  fullName: System.EventHandler<EquipmentMonitoring.Core.Services.Interfaces.TagValueChangedEventArgs>
+  nameWithType.vb: EventHandler(Of TagValueChangedEventArgs)
+  fullName.vb: System.EventHandler(Of EquipmentMonitoring.Core.Services.Interfaces.TagValueChangedEventArgs)
+  name.vb: EventHandler(Of TagValueChangedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: EquipmentMonitoring.Core.Services.Interfaces.TagValueChangedEventArgs
+    name: TagValueChangedEventArgs
+    href: EquipmentMonitoring.Core.Services.Interfaces.TagValueChangedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: EquipmentMonitoring.Core.Services.Interfaces.TagValueChangedEventArgs
+    name: TagValueChangedEventArgs
+    href: EquipmentMonitoring.Core.Services.Interfaces.TagValueChangedEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EquipmentMonitoring.Core.Services.Interfaces.ITagReader.Start*
+  commentId: Overload:EquipmentMonitoring.Core.Services.Interfaces.ITagReader.Start
+  href: EquipmentMonitoring.Core.Services.Interfaces.ITagReader.html#EquipmentMonitoring_Core_Services_Interfaces_ITagReader_Start
+  name: Start
+  nameWithType: ITagReader.Start
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.ITagReader.Start
+- uid: EquipmentMonitoring.Core.Services.Interfaces.ITagReader.Stop*
+  commentId: Overload:EquipmentMonitoring.Core.Services.Interfaces.ITagReader.Stop
+  href: EquipmentMonitoring.Core.Services.Interfaces.ITagReader.html#EquipmentMonitoring_Core_Services_Interfaces_ITagReader_Stop
+  name: Stop
+  nameWithType: ITagReader.Stop
+  fullName: EquipmentMonitoring.Core.Services.Interfaces.ITagReader.Stop

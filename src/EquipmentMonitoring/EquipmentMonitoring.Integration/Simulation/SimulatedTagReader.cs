@@ -4,15 +4,23 @@ using EquipmentMonitoring.Core.Services.Interfaces;
 
 namespace EquipmentMonitoring.Integration.Simulation
 {
+    /// <summary>
+    /// Имитатор промышленных датчиков. Генерирует плавно меняющиеся значения
+    /// с использованием случайного блуждания и возврата к среднему (mean reversion).
+    /// </summary>
     public class SimulatedTagReader : ITagReader
     {
-        private System.Timers.Timer _timer;
+        private System.Timers.Timer? _timer;
         private readonly Random _random = new();
         private readonly Dictionary<string, (double min, double max, double avg)> _tags;
         private readonly Dictionary<string, double> _currentValues = new(StringComparer.OrdinalIgnoreCase);
 
-        public event EventHandler<TagValueChangedEventArgs> TagValueChanged;
+        /// <inheritdoc/>
+        public event EventHandler<TagValueChangedEventArgs>? TagValueChanged;
 
+        /// <summary>
+        /// Инициализирует симулятор. Задаёт список тегов и начальные значения (равные средним).
+        /// </summary>
         public SimulatedTagReader()
         {
             _tags = new Dictionary<string, (double, double, double)>
@@ -33,6 +41,7 @@ namespace EquipmentMonitoring.Integration.Simulation
                 _currentValues[tag.Key] = tag.Value.avg;
         }
 
+        /// <inheritdoc/>
         public void Start()
         {
             _timer = new System.Timers.Timer(1000);
@@ -41,13 +50,18 @@ namespace EquipmentMonitoring.Integration.Simulation
             _timer.Start();
         }
 
+        /// <inheritdoc/>
         public void Stop()
         {
             _timer?.Stop();
             _timer?.Dispose();
         }
 
-        private void OnTimer(object sender, System.Timers.ElapsedEventArgs e)
+        /// <summary>
+        /// Обработчик таймера: для каждого тега вычисляется новое значение
+        /// с помощью случайного блуждания и возврата к среднему, затем вызывается событие <see cref="TagValueChanged"/>.
+        /// </summary>
+        private void OnTimer(object? sender, System.Timers.ElapsedEventArgs e)
         {
             foreach (var tag in _tags)
             {
