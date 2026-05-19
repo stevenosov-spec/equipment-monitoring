@@ -1,5 +1,4 @@
-﻿// Core/Services/OeeService.cs
-using EquipmentMonitoring.Core.Data;
+﻿using EquipmentMonitoring.Core.Data;
 using EquipmentMonitoring.Core.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -17,21 +16,18 @@ namespace EquipmentMonitoring.Core.Services
             _contextFactory = contextFactory;
         }
 
-        /// <summary>
-        /// Рассчитывает OEE для указанного оборудования за заданный интервал [from, to].
-        /// </summary>
         public async Task<OeeResult> CalculateOeeAsync(int equipmentId, DateTime from, DateTime to)
         {
             if (from > to)
-                (from, to) = (to, from);   // на всякий случай меняем местами
+                (from, to) = (to, from);
 
             await using var db = await _contextFactory.CreateDbContextAsync();
             var equipment = await db.Equipments.FindAsync(equipmentId);
             if (equipment == null) return null;
 
-            // --- Доступность (Availability) ---
+            // === ДОСТУПНОСТЬ (Availability) ===
             double totalMinutes = (to - from).TotalMinutes;
-            double downMinutes = 0;
+            double downMinutes = 0;                          // ← ОБНУЛЯЕМ ПЕРЕД ЦИКЛОМ
 
             var faults = await db.Faults
                 .Where(f => f.EquipmentId == equipmentId)
@@ -44,26 +40,27 @@ namespace EquipmentMonitoring.Core.Services
                 var faultEnd = fault.EndTime ?? to;
                 if (faultEnd > to) faultEnd = to;
                 if (faultEnd > faultStart)
-                    downMinutes += (faultEnd - faultStart).TotalMinutes;
+                    downMinutes += (faultEnd - faultStart).TotalMinutes;   // ← СУММИРУЕМ
             }
 
-            double availability = totalMinutes > 0 ? (totalMinutes - downMinutes) / totalMinutes : 1.0;
+            double availability = totalMinutes > 0
+                ? (totalMinutes - downMinutes) / totalMinutes
+                : 1.0;
 
-            // --- Производительность (Performance) ---
+            // === ПРОИЗВОДИТЕЛЬНОСТЬ (Performance) ===
             double performance = 1.0;
-            // Берём первый параметр с NominalValue > 0 для этого оборудования
             var perfParam = await db.Parameters
                 .FirstOrDefaultAsync(p => p.EquipmentId == equipmentId && p.NominalValue > 0);
+
             if (perfParam != null && perfParam.NominalValue > 0)
             {
-                // Используем текущее значение параметра (или можно среднее за период)
                 double currentValue = perfParam.Value;
                 performance = currentValue / perfParam.NominalValue;
                 performance = Math.Max(0, Math.Min(1.5, performance));
             }
 
-            // --- Качество (Quality) ---
-            double quality = 1.0; // заглушка
+            // === КАЧЕСТВО (Quality) ===
+            double quality = 1.0;
 
             return new OeeResult
             {

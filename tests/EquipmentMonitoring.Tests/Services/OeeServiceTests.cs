@@ -1,75 +1,65 @@
 using EquipmentMonitoring.Core.Data;
+using EquipmentMonitoring.Core.Models;
+using EquipmentMonitoring.Core.Services;
 using EquipmentMonitoring.Core.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Moq;
 using System;
-using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
+using Xunit;
 
-namespace EquipmentMonitoring.Core.Services
+namespace EquipmentMonitoring.Tests.Services
 {
-    public class OeeService : IOeeService
+    public class OeeServiceTests
     {
-        private readonly IDbContextFactory<AppDbContext> _contextFactory;
-
-        public OeeService(IDbContextFactory<AppDbContext> contextFactory)
+        private (AppDbContext db, OeeService service) CreateService()
         {
-            _contextFactory = contextFactory;
+            var options = new DbContextOptionsBuilder<AppDbContext>()
+                .UseInMemoryDatabase(Guid.NewGuid().ToString())
+                .Options;
+            var db = new AppDbContext(options);
+            var factoryMock = new Mock<IDbContextFactory<AppDbContext>>();
+            factoryMock.Setup(f => f.CreateDbContext()).Returns(db);
+            factoryMock.Setup(f => f.CreateDbContextAsync(It.IsAny<CancellationToken>())).ReturnsAsync(db);
+            var service = new OeeService(factoryMock.Object);
+            return (db, service);
         }
 
-        public async Task<OeeResult> CalculateOeeAsync(int equipmentId, DateTime from, DateTime to)
+        [Fact]
+        public async Task CalculateOee_NoFaults_ReturnsFullAvailability()
         {
-            if (from > to)
-                (from, to) = (to, from);
+            var (db, service) = CreateService();
+            var equipment = new Equipment { Name = "Насос" };
+            db.Equipments.Add(equipment);
+            await db.SaveChangesAsync();
 
-            await using var db = await _contextFactory.CreateDbContextAsync();
-            var equipment = await db.Equipments.FindAsync(equipmentId);
-            if (equipment == null) return null;
+            var result = await service.CalculateOeeAsync(equipment.Id, DateTime.Now.AddHours(-1), DateTime.Now);
+            Assert.NotNull(result);
+            Assert.Equal(1.0, result.Availability);
+        }
 
-            // === ДОСТУПНОСТЬ (Availability) ===
-            double totalMinutes = (to - from).TotalMinutes;
-            double downMinutes = 0;                          // ← ОБНУЛЯЕМ ПЕРЕД ЦИКЛОМ
+        [Fact]
+        public async Task CalculateOee_WithDowntime_ReducesAvailability()
+        {
+            var (db, service) = CreateService();
+            var equipment = new Equipment { Name = "Насос" };
+            db.Equipments.Add(equipment);
+            await db.SaveChangesAsync();
 
-            var faults = await db.Faults
-                .Where(f => f.EquipmentId == equipmentId)
-                .Where(f => f.StartTime < to && (f.EndTime == null || f.EndTime > from))
-                .ToListAsync();
-
-            foreach (var fault in faults)
-            {
-                var faultStart = fault.StartTime < from ? from : fault.StartTime;
-                var faultEnd = fault.EndTime ?? to;
-                if (faultEnd > to) faultEnd = to;
-                if (faultEnd > faultStart)
-                    downMinutes += (faultEnd - faultStart).TotalMinutes;   // ← СУММИРУЕМ
-            }
-
-            double availability = totalMinutes > 0
-                ? (totalMinutes - downMinutes) / totalMinutes
-                : 1.0;
-
-            // === ПРОИЗВОДИТЕЛЬНОСТЬ (Performance) ===
-            double performance = 1.0;
-            var perfParam = await db.Parameters
-                .FirstOrDefaultAsync(p => p.EquipmentId == equipmentId && p.NominalValue > 0);
-
-            if (perfParam != null && perfParam.NominalValue > 0)
-            {
-                double currentValue = perfParam.Value;
-                performance = currentValue / perfParam.NominalValue;
-                performance = Math.Max(0, Math.Min(1.5, performance));
-            }
-
-            // === КАЧЕСТВО (Quality) ===
-            double quality = 1.0;
-
-            return new OeeResult
+            var fault = new Fault
             {
                 EquipmentId = equipment.Id,
-                EquipmentName = equipment.Name,
-                Availability = Math.Round(availability, 3),
-                Performance = Math.Round(performance, 3),
-                Quality = quality
+                StartTime = DateTime.Now.AddHours(-1),
+                EndTime = DateTime.Now.AddMinutes(-30),
+                Status = Core.Enums.FaultStatus.Acknowledged
             };
+            db.Faults.Add(fault);
+            await db.SaveChangesAsync();
+
+            var result = await service.CalculateOeeAsync(equipment.Id, DateTime.Now.AddHours(-1), DateTime.Now);
+            Assert.NotNull(result);
+            Assert.Equal(0.5, result.Availability, 2);
         }
     }
 }
